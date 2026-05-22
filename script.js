@@ -127,6 +127,23 @@
     }
   }, { passive: true });
 
+  /* ── Scale to fit viewport (16:9 固定) ─────────────────── */
+  const BASE_W = 1280;
+  const BASE_H = 720;
+  const presentation = document.getElementById('presentation');
+
+  function scalePresentation() {
+    const scale = Math.min(
+      window.innerWidth  / BASE_W,
+      window.innerHeight / BASE_H
+    );
+    presentation.style.transform =
+      `translate(-50%, -50%) scale(${scale})`;
+  }
+
+  window.addEventListener('resize', scalePresentation);
+  scalePresentation();
+
   /* ── Init ───────────────────────────────────────────────── */
   totalEl.textContent = slides.length;
   goTo(0, 1);
