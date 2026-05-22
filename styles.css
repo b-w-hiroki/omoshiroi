@@ -86,7 +86,8 @@ em { font-style: normal; }
   flex-direction: column;
   background: var(--bg-1);
   overflow: hidden;
-  padding: var(--slide-py) var(--slide-px);
+  /* 全スライドで上部 100px の余白を確保（見出しスペース） */
+  padding: 100px var(--slide-px) var(--slide-py);
 }
 .slide.active { display: flex; }
 
@@ -95,30 +96,42 @@ em { font-style: normal; }
    SLIDE HEADER
    ============================================================ */
 .slide-header {
+  /* ── FIXED POSITION ─ 全スライドで完全に同じ位置に固定 ── */
+  position: absolute;
+  top: 36px;
+  left: 44px;
+  right: 44px;
+  z-index: 5;
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 16px;
+  margin-bottom: 0;
   flex-shrink: 0;
 }
 .slide-num {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--cyan);
-  opacity: 0.6;
+  opacity: 1;
   letter-spacing: 0.14em;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.30);
+  padding: 4px 10px;
+  border-radius: 4px;
+  line-height: 1;
 }
 .slide-label {
-  font-size: 15px;
-  color: var(--t2);
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--t1);
+  letter-spacing: 0.04em;
 }
 .slide-header::after {
   content: '';
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, var(--border), transparent);
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.35), transparent);
 }
 
 /* Bridge line — shown below slide-header when a section
@@ -145,6 +158,9 @@ em { font-style: normal; }
 .hl-red    { color: var(--red); }
 .hl-purple { color: #d4a0ff; }
 .hl-blue   { color: #80c8ff; }
+
+/* 改行を防ぐユーティリティ（「ある。」など短い末尾を孤立させない） */
+.nobr { white-space: nowrap; }
 
 
 /* ============================================================
@@ -223,6 +239,8 @@ em { font-style: normal; }
    SLIDE 1: TITLE
    ============================================================ */
 .slide--title {
+  /* タイトルスライドはヘッダーなしなので、上下対称に戻す */
+  padding-top: var(--slide-py);
   justify-content: center;
   align-items: flex-start;
   background: radial-gradient(ellipse 110% 90% at 25% 65%, #0d1535 0%, var(--bg-1) 60%);
@@ -243,12 +261,13 @@ em { font-style: normal; }
 
 .title-eyebrow {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 18px;
   color: var(--cyan);
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  opacity: 0.65;
-  margin-bottom: 20px;
+  opacity: 0.95;
+  font-weight: 700;
+  margin-bottom: 22px;
 }
 .title-main {
   font-size: clamp(50px, 5.6vw, 72px);
@@ -263,19 +282,21 @@ em { font-style: normal; }
   margin: 26px 0;
 }
 .title-sub {
-  font-size: clamp(16px, 1.8vw, 22px);
-  color: var(--t2);
-  font-weight: 300;
-  letter-spacing: 0.06em;
+  font-size: clamp(18px, 1.9vw, 24px);
+  color: var(--t1);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.65;
   position: relative; z-index: 2;
 }
 .title-deco {
   position: absolute;
   bottom: 82px; right: var(--slide-px);
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 15px;
   color: var(--cyan);
-  opacity: 0.45;
+  opacity: 0.85;
+  font-weight: 700;
   letter-spacing: 0.18em;
   animation: blink 2.4s step-end infinite;
 }
@@ -291,14 +312,14 @@ em { font-style: normal; }
 .why-body {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 72px;
+  grid-template-columns: 1.85fr 1fr;
+  gap: 32px;
   align-items: center;
   align-content: center;
   min-height: 0;
 }
 .why-timeline { display: flex; flex-direction: column; gap: 52px; }
-.timeline-item { display: flex; align-items: flex-start; gap: 22px; }
+.timeline-item { display: flex; align-items: flex-start; gap: 16px; }
 .tl-dot {
   width: 14px; height: 14px;
   border-radius: 50%;
@@ -328,17 +349,18 @@ em { font-style: normal; }
   padding-left: 40px;
 }
 .question-kicker {
-  font-size: 13px;
+  font-size: 18px;
   font-family: var(--mono);
-  color: var(--t3);
-  letter-spacing: 0.14em;
+  color: var(--cyan);
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  font-weight: 700;
+  margin-bottom: 28px;
 }
 .question-text {
-  font-size: clamp(40px, 4.8vw, 58px);
+  font-size: clamp(32px, 3.8vw, 48px);
   font-weight: 800;
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 
@@ -402,12 +424,12 @@ em { font-style: normal; }
   gap: 0;
 }
 .okamoto-respect {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: rgba(245,200,66,0.65);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 5px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(245,200,66,0.95);
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
 }
 .okamoto-name {
   font-size: clamp(22px, 2.1vw, 28px);
@@ -417,10 +439,13 @@ em { font-style: normal; }
   text-shadow: 0 0 20px rgba(245,200,66,0.3);
 }
 .okamoto-role {
-  font-size: 13px;
-  color: var(--t3);
+  font-size: 16px;
+  color: var(--t1);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-top: 4px;
   margin-bottom: 14px;
-  letter-spacing: 0.03em;
+  line-height: 1.5;
 }
 .okamoto-works {
   display: flex;
@@ -439,8 +464,10 @@ em { font-style: normal; }
   white-space: nowrap;
 }
 .okamoto-quote {
-  font-size: 13px;
-  color: var(--t2);
+  font-size: clamp(15px, 1.5vw, 18px);
+  color: var(--t1);
+  font-weight: 600;
+  line-height: 1.65;
   line-height: 1.85;
   border-left: 3px solid rgba(245,200,66,0.5);
   padding-left: 14px;
@@ -497,14 +524,15 @@ em { font-style: normal; }
              box-shadow: 0 0 10px rgba(245,200,66,0.25); }
 .sp-label {
   position: absolute;
-  top: 38px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--t3);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--t1);
   white-space: nowrap;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 }
 .sp-line {
   flex: 1;
@@ -589,20 +617,23 @@ em { font-style: normal; }
 .ok-card--4 .ok-step-num { background: rgba(245,200,66,0.15); border: 1.5px solid rgba(245,200,66,0.45); color: var(--gold); }
 
 .ok-step-phase {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
-.ok-card--1 .ok-step-phase { color: rgba(68,136,204,0.7); }
-.ok-card--2 .ok-step-phase { color: rgba(102,153,221,0.7); }
-.ok-card--3 .ok-step-phase { color: rgba(153,187,238,0.7); }
-.ok-card--4 .ok-step-phase { color: rgba(245,200,66,0.6); }
+.ok-card--1 .ok-step-phase { color: #b8d6ff; }
+.ok-card--2 .ok-step-phase { color: #c8e0ff; }
+.ok-card--3 .ok-step-phase { color: #dceaff; }
+.ok-card--4 .ok-step-phase { color: var(--gold); }
 
 .ok-card-title {
-  font-size: clamp(16px, 1.7vw, 22px);
+  font-size: clamp(17px, 1.7vw, 22px);
   font-weight: 800;
   line-height: 1.3;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 .ok-card-visual {
   width: 100%;
@@ -677,17 +708,18 @@ img.ok-thumb {
   border: 1px solid var(--border);
 }
 .ok-card-caption {
-  font-size: 12px;
-  color: var(--t3);
-  font-style: italic;
-  line-height: 1.6;
-  padding-top: 10px;
-  margin-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  word-break: normal;          /* allow per-character JP wrapping (override body keep-all) */
+  font-size: 15px;
+  color: var(--t1);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.55;
+  padding-top: 12px;
+  margin-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  word-break: normal;
   overflow-wrap: anywhere;
   display: -webkit-box;
-  -webkit-line-clamp: 2;       /* hard cap at 2 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -734,6 +766,8 @@ img.ok-thumb {
 
 /* ─── Collapsed (inactive) card ─── */
 .legend-card:not(.lc-active) { opacity: 0.5; }
+/* But keep names readable on inactive cards */
+.legend-card:not(.lc-active) .legend-name { opacity: 1.65; }
 
 /* Avatar — fills all space above the body */
 .legend-avatar {
@@ -800,12 +834,13 @@ img.ok-thumb {
 
 .legend-name {
   display: block;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--t2);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
+  font-family: var(--font);
+  font-size: clamp(20px, 1.9vw, 26px);
+  font-weight: 800;
+  color: var(--t1);
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  line-height: 1.25;
 }
 .legend-works {
   display: flex;
@@ -1125,7 +1160,7 @@ img.ok-thumb {
   align-items: stretch;
 }
 .slide--pivot .slide-header {
-  margin-bottom: 0;
+  /* fixed-position header — no margin override needed */
 }
 .pivot-body--hero .pivot-statement {
   padding-left: 0;
@@ -1319,14 +1354,13 @@ img.ok-thumb {
 .slide--4el {
   background: radial-gradient(ellipse 100% 100% at 50% 50%,
     #0a1230 0%, var(--bg-1) 70%);
-  /* Minimal padding to maximise circular model canvas */
-  padding-top:    32px;
+  /* Minimal padding to maximise circular model canvas (top still 100px for header) */
   padding-bottom: 12px;
   padding-left:   28px;
   padding-right:  28px;
 }
 .slide--4el .slide-header {
-  margin-bottom: 8px;
+  /* fixed-position header — no margin override needed */
 }
 .quad-wrapper {
   flex: 1;
@@ -1443,7 +1477,7 @@ img.ok-thumb {
 .btl-dot.d-peak    { background: var(--green);  box-shadow: 0 0 12px var(--green); }
 
 .btl-label { font-size: 15px; font-weight: 600; color: var(--t1); line-height: 1.45; max-width: 110px; }
-.btl-emotion { font-size: 12px; font-family: var(--mono); color: var(--t3); letter-spacing: 0.04em; }
+.btl-emotion { font-size: 14px; font-weight: 600; font-family: var(--mono); color: var(--cyan); letter-spacing: 0.04em; opacity: 0.85; }
 
 .battle-message {
   border-left: 3px solid var(--yellow);
@@ -1700,9 +1734,10 @@ img.ok-thumb {
   margin-bottom: 6px;
 }
 .bull-headline p {
-  font-size: clamp(19px, 2.1vw, 27px);
+  font-size: clamp(20px, 2.3vw, 30px);
   font-weight: 800;
   color: var(--t1);
+  letter-spacing: 0.01em;
   line-height: 1.4;
 }
 .bull-wrap {
@@ -1713,10 +1748,8 @@ img.ok-thumb {
   justify-content: center;
 }
 .bull-svg {
-  width: auto;
+  width: 100%;
   height: 100%;
-  max-height: 540px;
-  max-width: 100%;
   display: block;
 }
 .design-flow {
@@ -1875,6 +1908,8 @@ img.ok-thumb {
    SLIDE 13: CONCLUSION
    ============================================================ */
 .slide--conclusion {
+  /* 結論スライドはヘッダーなしなので、上下対称に戻す */
+  padding-top: var(--slide-py);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1902,32 +1937,34 @@ img.ok-thumb {
   max-width: 880px;
 }
 .conc-intro {
-  font-size: 13px;
+  font-size: 18px;
   font-family: var(--mono);
-  color: var(--t3);
-  letter-spacing: 0.16em;
+  color: var(--cyan);
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
+  font-weight: 700;
 }
 .conc-main {
-  font-size: clamp(26px, 2.8vw, 34px);
+  font-size: clamp(30px, 3.4vw, 44px);
   font-weight: 900;
   line-height: 1.75;
   color: var(--t1);
 }
 .conc-main .big-line {
   display: block;
-  font-size: clamp(34px, 3.6vw, 46px);
+  font-size: clamp(44px, 5.4vw, 76px);
   color: var(--cyan);
   margin: 10px 0;
 }
 .conc-by {
-  font-size: 14px;
-  color: var(--t3);
-  margin-top: 28px;
-  font-family: var(--mono);
-  letter-spacing: 0.08em;
-  line-height: 1.8;
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: var(--t2);
+  margin-top: 36px;
+  font-family: var(--font);
+  letter-spacing: 0.02em;
+  line-height: 1.85;
+  font-weight: 500;
 }
 
 
@@ -1935,6 +1972,8 @@ img.ok-thumb {
    SLIDE 14: FINAL
    ============================================================ */
 .slide--final {
+  /* 最終スライドはヘッダーなしなので、上下対称に戻す */
+  padding-top: var(--slide-py);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1947,15 +1986,16 @@ img.ok-thumb {
 }
 .final-label {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   color: var(--cyan);
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  opacity: 0.45;
-  margin-bottom: 16px;
+  opacity: 0.9;
+  margin-bottom: 22px;
+  font-weight: 700;
 }
 .final-main {
-  font-size: clamp(40px, 4.4vw, 56px);
+  font-size: clamp(48px, 5.0vw, 72px);
   font-weight: 900;
   line-height: 1.45;
   letter-spacing: -0.02em;
@@ -1964,15 +2004,16 @@ img.ok-thumb {
 .final-main .hl-cyan { display: inline; }
 
 .final-detail {
-  margin-top: 20px;
-  padding-top: 16px;
+  margin-top: 28px;
+  padding-top: 22px;
   border-top: 1px solid var(--border);
-  font-size: clamp(14px, 1.45vw, 17px);
-  color: var(--t2);
-  line-height: 2;
-  max-width: 720px;
+  font-size: clamp(18px, 1.85vw, 22px);
+  color: var(--t1);
+  line-height: 1.85;
+  max-width: 780px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 500;
 }
 .final-tail {
   width: 48px; height: 2px;
@@ -1987,12 +2028,12 @@ img.ok-thumb {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 14px;
 }
 .bal-lead {
   flex-shrink: 0;
   text-align: center;
-  font-size: clamp(17px, 1.9vw, 22px);
+  font-size: clamp(18px, 2.0vw, 24px);
   font-weight: 700;
   color: var(--t1);
 }
@@ -2007,20 +2048,18 @@ img.ok-thumb {
   justify-content: center;
 }
 .bal-svg {
-  width: auto;
+  width: 100%;
   height: 100%;
-  max-height: 430px;
-  max-width: 100%;
   display: block;
 }
 .bal-take {
   flex-shrink: 0;
   text-align: center;
   border-radius: 12px;
-  padding: 14px 26px;
-  background: linear-gradient(90deg, rgba(255,214,0,0.05), rgba(255,214,0,0.12), rgba(255,214,0,0.05));
+  padding: 18px 28px;
+  background: linear-gradient(90deg, rgba(255,214,0,0.05), rgba(255,214,0,0.14), rgba(255,214,0,0.05));
   border: 1px solid var(--yellow-border);
-  font-size: clamp(16px, 1.8vw, 21px);
+  font-size: clamp(18px, 2.0vw, 24px);
   font-weight: 700;
   color: var(--t1);
 }
@@ -2032,15 +2071,31 @@ img.ok-thumb {
    ============================================================ */
 .ep-alert {
   background: rgba(255,99,53,0.10);
-  border: 1px solid rgba(255,99,53,0.35);
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 700;
+  border: 1px solid rgba(255,99,53,0.40);
+  border-left: 5px solid var(--orange);
+  border-radius: 10px;
+  padding: 18px 28px;
   color: var(--orange);
   flex-shrink: 0;
-  margin-bottom: 4px;
+  margin-bottom: 14px;
+  text-align: center;
 }
+.ep-alert .ep-alert-main {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 900;
+  color: var(--orange);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+.ep-alert .ep-alert-sub {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 600;
+  color: var(--t1);
+  margin-top: 8px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+.ep-alert .ep-alert-sub .hl-yellow { font-weight: 800; }
 /* ── Expectation-control: single top-to-bottom story (slide 9a) ── */
 .ec-stage {
   flex: 1;
@@ -2212,17 +2267,21 @@ img.ok-thumb {
 /* Image placeholder (swap with <img class="apply-thumb" src=...> later) */
 .apply-thumb {
   width: 100%;
-  height: 96px;
-  object-fit: cover;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 34px;
   background:
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0 10px, rgba(255,255,255,0.05) 10px 20px),
-    linear-gradient(135deg, rgba(0,212,255,0.10), rgba(192,132,252,0.10));
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 12px, rgba(255,255,255,0.04) 12px 24px),
+    linear-gradient(135deg, rgba(0,212,255,0.08), rgba(192,132,252,0.08));
   border-bottom: 1px solid var(--border);
   position: relative;
+  overflow: hidden;
+}
+.apply-thumb svg {
+  width: 92%;
+  height: 80%;
+  display: block;
 }
 .apply-thumb::after {
   content: attr(data-ph);
@@ -2232,7 +2291,7 @@ img.ok-thumb {
   color: var(--t3);
   font-family: var(--mono);
   letter-spacing: 0.04em;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .apply-body {
   padding: 16px 20px 18px;
@@ -2242,7 +2301,7 @@ img.ok-thumb {
   flex: 1;
 }
 .apply-name { font-size: clamp(18px, 1.9vw, 22px); font-weight: 800; color: var(--t1); line-height: 1.25; }
-.apply-desc { font-size: 14px; color: var(--cyan); font-weight: 600; }
+.apply-desc { font-size: clamp(14px, 1.4vw, 16px); color: var(--cyan); font-weight: 600; }
 .apply-quote {
   margin-top: 6px;
   font-size: 15px;
@@ -2250,18 +2309,19 @@ img.ok-thumb {
   font-weight: 500;
   line-height: 1.4;
 }
-.apply-quote::before { content: '「'; color: var(--t3); }
-.apply-quote::after  { content: '」'; color: var(--t3); }
+.apply-quote::before { content: ''; }
+.apply-quote::after  { content: ''; }
 
 .apply-note {
   flex-shrink: 0;
-  font-size: 15px;
-  color: var(--t2);
-  font-style: italic;
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 600;
+  color: var(--t1);
   text-align: center;
-  margin-top: 18px;
+  margin-top: 22px;
   margin-bottom: auto;
-  padding-bottom: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
 }
 
 
@@ -2286,4 +2346,87 @@ img.ok-thumb {
   }
   #slide-counter, #nav-hint { display: none !important; }
   .title-deco { animation: none !important; opacity: 0.35 !important; }
+}
+
+
+/* ============================================================
+   SLIDE 2: ASK — "面白い"とは？ (pause slide)
+   ============================================================ */
+.ask-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 56px;
+  min-height: 0;
+}
+.ask-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 22px;
+  color: var(--t3);
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+}
+.ask-examples--left  { text-align: right; align-items: flex-end; }
+.ask-examples--right { text-align: left;  align-items: flex-start; }
+.ask-examples li { position: relative; padding: 2px 0; font-weight: 500; }
+.ask-examples--left li::after,
+.ask-examples--right li::before {
+  content: '';
+  display: inline-block;
+  width: 22px; height: 1px;
+  background: var(--cyan);
+  vertical-align: middle;
+  opacity: 0.45;
+}
+.ask-examples--left  li::after  { margin-left: 14px; }
+.ask-examples--right li::before { margin-right: 14px; }
+
+.ask-core {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ask-kicker {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--cyan);
+  letter-spacing: 0.32em;
+  font-weight: 700;
+  margin-bottom: 36px;
+  opacity: 0.95;
+}
+.ask-question {
+  font-size: clamp(56px, 5.6vw, 78px);
+  font-weight: 900;
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+  color: var(--t1);
+}
+.ask-q-lead {
+  display: block;
+  font-size: 0.42em;
+  color: var(--t2);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 22px;
+  opacity: 0.85;
+}
+.ask-q-main { display: block; }
+.ask-divider {
+  width: 80px; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  margin: 42px 0 30px;
+}
+.ask-note {
+  font-size: clamp(18px, 1.85vw, 22px);
+  color: var(--t2);
+  line-height: 1.75;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }

@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>「面白い」とは何か</title>
   <link rel="stylesheet" href="styles.css">
+
+  <template id="__bundler_thumbnail" data-bg-color="#07091c">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <!-- Concentric rings (cyber theme) -->
+      <circle cx="600" cy="400" r="280" fill="none" stroke="rgba(0,212,255,0.3)" stroke-width="2" stroke-dasharray="4 12"/>
+      <circle cx="600" cy="400" r="200" fill="none" stroke="rgba(0,212,255,0.4)" stroke-width="2" stroke-dasharray="6 8"/>
+      <!-- 4 element dots (推測 観察 成長 変化) -->
+      <circle cx="600" cy="200" r="32" fill="#00d4ff"/>
+      <circle cx="800" cy="400" r="32" fill="#ffd600"/>
+      <circle cx="600" cy="600" r="32" fill="#ff6335"/>
+      <circle cx="400" cy="400" r="32" fill="#c084fc"/>
+      <!-- Center 面白い -->
+      <circle cx="600" cy="400" r="80" fill="#0c1028" stroke="#00d4ff" stroke-width="3"/>
+      <text x="600" y="408" text-anchor="middle" fill="#00d4ff" font-size="36" font-weight="900" font-family="Hiragino Sans,sans-serif">面白い</text>
+    </svg>
+  </template>
 </head>
 <body>
 
@@ -39,12 +55,50 @@
 
 
   <!-- ========================================================
-       SLIDE 02: WHY THIS QUESTION
+       SLIDE 02: ASK — "面白い"とは？ (pause slide)
        ======================================================== -->
-  <section class="slide" id="slide-2">
-    <!-- Speaker note: この問いを立てた個人的な背景。面白さの構造はゲームだけでなく、プロダクトやビジネスにも直結している。 -->
+  <section class="slide slide--ask" id="slide-2">
+    <!-- Speaker note: ここで一拍置く。「面白い」という言葉、誰もが日常で使うけれど、いざ説明しようとすると意外と難しい。問いを聴衆と共有してから本編に入る。 -->
     <div class="slide-header">
       <span class="slide-num">02</span>
+      <span class="slide-label">問い</span>
+    </div>
+
+    <div class="ask-body">
+      <ul class="ask-examples ask-examples--left" aria-hidden="true">
+        <li>ゲーム</li>
+        <li>映画</li>
+        <li>漫画</li>
+        <li>小説</li>
+      </ul>
+
+      <div class="ask-core">
+        <p class="ask-kicker">PAUSE &amp; ASK</p>
+        <h2 class="ask-question">
+          <span class="ask-q-lead">そもそも、</span>
+          <span class="ask-q-main">「面白い」とは<br>何でしょうか？</span>
+        </h2>
+        <div class="ask-divider"></div>
+        <p class="ask-note">日常的に使う言葉ほど、<br><span class="hl-cyan">説明するのは難しい</span>。</p>
+      </div>
+
+      <ul class="ask-examples ask-examples--right" aria-hidden="true">
+        <li>会話</li>
+        <li>仕事</li>
+        <li>スポーツ</li>
+        <li>人生</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 03: WHY THIS QUESTION
+       ======================================================== -->
+  <section class="slide" id="slide-3">
+    <!-- Speaker note: この問いを立てた個人的な背景。面白さの構造はゲームだけでなく、プロダクトやビジネスにも直結している。 -->
+    <div class="slide-header">
+      <span class="slide-num">03</span>
       <span class="slide-label">なぜこの問いか</span>
     </div>
 
@@ -52,15 +106,15 @@
       <div class="why-timeline">
         <div class="timeline-item">
           <div class="tl-dot tl-dot--c"></div>
-          <p class="tl-text">子どもの頃からゲームが好きで、<span class="hl-cyan">「なぜこれは面白いのか」</span>をずっと考えていた</p>
+          <p class="tl-text">子どもの頃からゲームが好きで、<br><span class="hl-cyan">「なぜこれは面白いのか」</span>をずっと考えていた</p>
         </div>
         <div class="timeline-item">
           <div class="tl-dot tl-dot--y"></div>
-          <p class="tl-text">作る側になってわかった——<span class="hl-yellow">「面白さは設計できる」</span>という事実</p>
+          <p class="tl-text">作る側になってわかった——<br><span class="hl-yellow">「面白さは設計できる」</span>という事実</p>
         </div>
         <div class="timeline-item">
           <div class="tl-dot tl-dot--o"></div>
-          <p class="tl-text">その構造はゲームだけでなく、<span class="hl-orange">プロダクト・マーケ・教育・組織</span>にも使える</p>
+          <p class="tl-text">その構造はゲームだけでなく、<br><span class="hl-orange">プロダクト・マーケ・教育・組織</span>にも使える</p>
         </div>
       </div>
 
@@ -68,8 +122,7 @@
         <p class="question-kicker">THE CORE QUESTION</p>
         <p class="question-text">
           「面白い」は<br>
-          <span class="hl-cyan">偶然ではなく</span><br>
-          設計できる
+          <span class="hl-cyan nobr">偶然ではなく設計</span><span class="nobr">できる</span>
         </p>
       </div>
     </div>
@@ -79,10 +132,10 @@
   <!-- ========================================================
        SLIDE 03: OKAMOTO (SPECIAL — GOLD)
        ======================================================== -->
-  <section class="slide slide--okamoto" id="slide-3">
+  <section class="slide slide--okamoto" id="slide-4">
     <!-- Speaker note: 岡本さんのフレームがこの資料の出発点。4段階の面白さは時系列で捉えることができる。 -->
     <div class="slide-header">
-      <span class="slide-num">03</span>
+      <span class="slide-num">04</span>
       <span class="slide-label">岡本吉起さんの視点</span>
     </div>
 
@@ -105,7 +158,7 @@
             <span class="okamoto-work-tag">モンスターストライク</span>
           </div>
           <blockquote class="okamoto-quote">
-            「面白いゲームには4段階の面白さがある」
+            「面白いゲームには、<br>4段階の面白さがある」
           </blockquote>
         </div>
       </div>
@@ -136,7 +189,7 @@
               <div class="ok-card-desc-item">口コミ・評判</div>
             </div>
             <img class="ok-thumb" src="images/okamoto-hear.png" alt="噂を聞いて冒険を想像する">
-            <p class="ok-card-caption">触れる前に「気になる」を作る段階。弱いと土俵に立てない。</p>
+            <p class="ok-card-caption">触れる前に「気になる」を作る。<br>弱いと土俵に立てない。</p>
           </div>
 
           <div class="ok-card ok-card--2">
@@ -151,7 +204,7 @@
               <div class="ok-card-desc-item">世界観・雰囲気</div>
             </div>
             <img class="ok-thumb" src="images/okamoto-see.png" alt="初見のビジュアルに感動">
-            <p class="ok-card-caption">第一印象で期待値が決まる。最初の数秒が勝負。</p>
+            <p class="ok-card-caption">第一印象で期待値が決まる。<br>最初の数秒が勝負。</p>
           </div>
 
           <div class="ok-card ok-card--3">
@@ -194,10 +247,10 @@
   <!-- ========================================================
        SLIDE 04: LEGENDS — portrait card style
        ======================================================== -->
-  <section class="slide" id="slide-4">
+  <section class="slide" id="slide-5">
     <!-- Speaker note: 先人たちの視点をサラッと紹介。深掘りしすぎず、次の「共通点は何か」への伏線として扱う。 -->
     <div class="slide-header">
-      <span class="slide-num">04</span>
+      <span class="slide-num">05</span>
       <span class="slide-label">先人たちの視点</span>
     </div>
 
@@ -291,10 +344,10 @@
   <!-- ========================================================
        SLIDE 05: COMMON THREAD (PIVOT)
        ======================================================== -->
-  <section class="slide slide--pivot" id="slide-5">
+  <section class="slide slide--pivot" id="slide-6">
     <!-- Speaker note: ここが資料の転換点。様々なキーワードを並べた後、「共通しているのは感情が動いていること」という一言に収束させる。間を大事に。 -->
     <div class="slide-header">
-      <span class="slide-num">05</span>
+      <span class="slide-num">06</span>
       <span class="slide-label">共通するものは何か</span>
     </div>
 
@@ -326,10 +379,10 @@
   <!-- ========================================================
        SLIDE 06: GAME CAN'T GIVE EMOTIONS
        ======================================================== -->
-  <section class="slide" id="slide-6">
+  <section class="slide" id="slide-7">
     <!-- Speaker note: ゲームはプレイヤーに「楽しくなれ」と命令できない。できるのは「状態を作ること」だけ。この設計思想の違いが、良いゲームと悪いゲームを分ける。 -->
     <div class="slide-header">
-      <span class="slide-num">06</span>
+      <span class="slide-num">07</span>
       <span class="slide-label">設計の原則</span>
     </div>
 
@@ -392,244 +445,206 @@
   <!-- ========================================================
        SLIDE 07: 4 ELEMENTS — CIRCULAR FLOW MODEL
        ======================================================== -->
-  <section class="slide slide--4el" id="slide-7a">
+  <section class="slide slide--4el" id="slide-8a">
     <!-- Speaker note: 推測→観察→成長→変化→推測の循環。どれが欠けても感情は動かない。この4つが揃ったとき、「やめられない」体験が生まれる。 -->
     <div class="slide-header">
-      <span class="slide-num">07</span>
+      <span class="slide-num">08</span>
       <span class="slide-label">感情の運動を起こす4要素【循環モデル】</span>
     </div>
 
     <div class="circ-wrap">
       <!--
-        NEW LAYOUT: circle contains only the large name; info panel sits beside each node
-        ViewBox 1200×610. Center (600,305). Nodes r=75 on r=180 circle:
-          推測(600,125) 観察(780,305) 成長(600,485) 変化(420,305)
-        True circular arcs r=160, ±25° inset (arcsin(75/180)≈25°):
-          推測→観察: M 668,160 A160 → 745,237
-          観察→成長: M 745,373 A160 → 668,450
-          成長→変化: M 532,450 A160 → 455,373
-          変化→推測: M 455,237 A160 → 532,160
-        Info panels: right of 推測/観察, left of 成長/変化
+        REDESIGNED LAYOUT (v3) — bigger, more impactful, easier to read
+        ViewBox 1500×720 (wider aspect ≈ 2.08 to fill 1920×900 slide content)
+        Center (750,360). Nodes r=105 on r=230 orbital ring.
+          推測(750,130) 観察(980,360) 成長(750,590) 変化(520,360)
+        Arc circle r=205 (passes between nodes). Inset angle = arcsin(105/230) ≈ 27.2°.
+          推測→観察 arc: M 844,178 A 205 → 932,266   arrow tip (932,266)
+          観察→成長 arc: M 932,454 A 205 → 844,542   arrow tip (844,542)
+          成長→変化 arc: M 656,542 A 205 → 568,454   arrow tip (568,454)
+          変化→推測 arc: M 568,266 A 205 → 656,178   arrow tip (656,178)
+        Info panels: 350×170, beside each node (right for 推測/観察, left for 成長/変化)
       -->
-      <svg class="circ-svg" viewBox="0 0 1200 610" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="circ-svg" viewBox="0 0 1500 720" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <!-- Node gradients: dark center → colored rim for max text contrast -->
           <radialGradient id="rg-c" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#000d18" stop-opacity="0.92"/>
-            <stop offset="60%"  stop-color="#001c32" stop-opacity="0.74"/>
-            <stop offset="85%"  stop-color="#003650" stop-opacity="0.44"/>
-            <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.28"/>
+            <stop offset="0%"   stop-color="#000d18" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#001c32" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#003650" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.32"/>
           </radialGradient>
           <radialGradient id="rg-y" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#0e0d00" stop-opacity="0.92"/>
-            <stop offset="60%"  stop-color="#201c00" stop-opacity="0.74"/>
-            <stop offset="85%"  stop-color="#3c3200" stop-opacity="0.44"/>
-            <stop offset="100%" stop-color="#ffd600" stop-opacity="0.28"/>
+            <stop offset="0%"   stop-color="#0e0d00" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#201c00" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#3c3200" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#ffd600" stop-opacity="0.32"/>
           </radialGradient>
           <radialGradient id="rg-o" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#120400" stop-opacity="0.92"/>
-            <stop offset="60%"  stop-color="#260900" stop-opacity="0.74"/>
-            <stop offset="85%"  stop-color="#3e1200" stop-opacity="0.44"/>
-            <stop offset="100%" stop-color="#ff6335" stop-opacity="0.28"/>
+            <stop offset="0%"   stop-color="#120400" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#260900" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#3e1200" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#ff6335" stop-opacity="0.32"/>
           </radialGradient>
           <radialGradient id="rg-p" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#0a0018" stop-opacity="0.92"/>
-            <stop offset="60%"  stop-color="#1a0030" stop-opacity="0.74"/>
-            <stop offset="85%"  stop-color="#2e004c" stop-opacity="0.44"/>
-            <stop offset="100%" stop-color="#c084fc" stop-opacity="0.28"/>
+            <stop offset="0%"   stop-color="#0a0018" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#1a0030" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#2e004c" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#c084fc" stop-opacity="0.32"/>
           </radialGradient>
-          <!-- Center: white/silver — clearly distinct from all 4 node colors -->
           <radialGradient id="rg-ctr" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stop-color="#03060e" stop-opacity="0.96"/>
-            <stop offset="55%"  stop-color="#0c1428" stop-opacity="0.82"/>
-            <stop offset="82%"  stop-color="#1c2c4a" stop-opacity="0.58"/>
-            <stop offset="100%" stop-color="#c8d8f8" stop-opacity="0.42"/>
+            <stop offset="0%"   stop-color="#03060e" stop-opacity="0.98"/>
+            <stop offset="50%"  stop-color="#0a1428" stop-opacity="0.88"/>
+            <stop offset="80%"  stop-color="#1c2c4a" stop-opacity="0.62"/>
+            <stop offset="100%" stop-color="#c8d8f8" stop-opacity="0.48"/>
           </radialGradient>
 
-          <!-- Node glow -->
-          <filter id="fc"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <filter id="fy"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <filter id="fo"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <filter id="fp"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <filter id="fctr" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="26" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <!-- Arc under-glow -->
-          <filter id="farc" x="-40%" y="-300%" width="180%" height="700%"><feGaussianBlur stdDeviation="9"/></filter>
-          <!-- Node name shadow -->
+          <filter id="fc"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fy"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fo"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fp"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fctr" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="32" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="farc" x="-40%" y="-300%" width="180%" height="700%"><feGaussianBlur stdDeviation="11"/></filter>
           <filter id="ftxt" x="-15%" y="-40%" width="130%" height="180%">
-            <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#000918" flood-opacity="1.0"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#000918" flood-opacity="1.0"/>
           </filter>
-          <!-- Info panel shadow -->
           <filter id="fpanel" x="-6%" y="-8%" width="112%" height="116%">
-            <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#000510" flood-opacity="0.80"/>
+            <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000510" flood-opacity="0.82"/>
           </filter>
         </defs>
 
-        <!-- Background atmosphere -->
-        <circle cx="600" cy="305" r="270" fill="rgba(0,15,42,0.55)"/>
-        <circle cx="600" cy="125" r="145" fill="rgba(0,212,255,0.07)"/>
-        <circle cx="780" cy="305" r="145" fill="rgba(255,214,0,0.07)"/>
-        <circle cx="600" cy="485" r="145" fill="rgba(255,99,53,0.07)"/>
-        <circle cx="420" cy="305" r="145" fill="rgba(192,132,252,0.07)"/>
+        <!-- ─── Background atmosphere ─── -->
+        <circle cx="750" cy="360" r="320" fill="rgba(0,15,42,0.55)"/>
+        <circle cx="750" cy="130" r="180" fill="rgba(0,212,255,0.07)"/>
+        <circle cx="980" cy="360" r="180" fill="rgba(255,214,0,0.07)"/>
+        <circle cx="750" cy="590" r="180" fill="rgba(255,99,53,0.07)"/>
+        <circle cx="520" cy="360" r="180" fill="rgba(192,132,252,0.07)"/>
 
         <!-- Orbital track ring -->
-        <circle cx="600" cy="305" r="160"
-                stroke="rgba(255,255,255,0.08)" stroke-width="1.5"
+        <circle cx="750" cy="360" r="205"
+                stroke="rgba(255,255,255,0.10)" stroke-width="1.5"
                 stroke-dasharray="4 10" fill="none"/>
 
         <!-- Arc under-glow -->
-        <path d="M 668,160 A 160,160 0 0,1 745,237" stroke="#00d4ff" stroke-width="13" fill="none" opacity="0.35" filter="url(#farc)"/>
-        <path d="M 745,373 A 160,160 0 0,1 668,450" stroke="#ffd600" stroke-width="13" fill="none" opacity="0.35" filter="url(#farc)"/>
-        <path d="M 532,450 A 160,160 0 0,1 455,373" stroke="#ff6335" stroke-width="13" fill="none" opacity="0.35" filter="url(#farc)"/>
-        <path d="M 455,237 A 160,160 0 0,1 532,160" stroke="#c084fc" stroke-width="13" fill="none" opacity="0.35" filter="url(#farc)"/>
+        <path d="M 844,178 A 205,205 0 0,1 932,266" stroke="#00d4ff" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc)"/>
+        <path d="M 932,454 A 205,205 0 0,1 844,542" stroke="#ffd600" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc)"/>
+        <path d="M 656,542 A 205,205 0 0,1 568,454" stroke="#ff6335" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc)"/>
+        <path d="M 568,266 A 205,205 0 0,1 656,178" stroke="#c084fc" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc)"/>
 
-        <!-- True circular arcs (A command) — shortened slightly so stroke doesn't bleed into arrowhead -->
-        <path class="circ-arc circ-arc--c" d="M 668,160 A 160,160 0 0,1 740,227"
-              stroke="#00d4ff" stroke-width="5.5" fill="none"/>
-        <path class="circ-arc circ-arc--y" d="M 745,373 A 160,160 0 0,1 674,444"
-              stroke="#ffd600" stroke-width="5.5" fill="none"/>
-        <path class="circ-arc circ-arc--o" d="M 532,450 A 160,160 0 0,1 461,379"
-              stroke="#ff6335" stroke-width="5.5" fill="none"/>
-        <path class="circ-arc circ-arc--p" d="M 455,237 A 160,160 0 0,1 526,166"
-              stroke="#c084fc" stroke-width="5.5" fill="none"/>
+        <!-- Main arcs -->
+        <path class="circ-arc circ-arc--c" d="M 844,178 A 205,205 0 0,1 928,260"
+              stroke="#00d4ff" stroke-width="6.5" fill="none"/>
+        <path class="circ-arc circ-arc--y" d="M 932,454 A 205,205 0 0,1 848,538"
+              stroke="#ffd600" stroke-width="6.5" fill="none"/>
+        <path class="circ-arc circ-arc--o" d="M 656,542 A 205,205 0 0,1 572,460"
+              stroke="#ff6335" stroke-width="6.5" fill="none"/>
+        <path class="circ-arc circ-arc--p" d="M 568,266 A 205,205 0 0,1 652,182"
+              stroke="#c084fc" stroke-width="6.5" fill="none"/>
 
-        <!--
-          Arrow tips — precisely computed equilateral-ish triangles (H=18 W=10)
-          Each tip is at the arc's true endpoint on the orbit circle (r=160 from center 600,305).
-          Tangent angle θ = radial-angle + 90° (clockwise sweep).
-            推測→観察: tip(745,237) θ=65°  → base(728,225)(746,216)
-            観察→成長: tip(668,450) θ=155° → base(680,433)(689,451)
-            成長→変化: tip(455,373) θ=245° → base(472,385)(454,394)
-            変化→推測: tip(532,160) θ=335° → base(520,177)(511,159)
-        -->
-        <polygon points="745,237 728,225 746,216" fill="#00d4ff"/>
-        <polygon points="668,450 680,433 689,451" fill="#ffd600"/>
-        <polygon points="455,373 472,385 454,394" fill="#ff6335"/>
-        <polygon points="532,160 520,177 511,159" fill="#c084fc"/>
+        <!-- Arrow tips at arc endpoints -->
+        <polygon points="932,266 918,251 928,245" fill="#00d4ff"/>
+        <polygon points="844,542 859,528 865,538" fill="#ffd600"/>
+        <polygon points="568,454 582,469 572,475" fill="#ff6335"/>
+        <polygon points="656,178 641,192 635,182" fill="#c084fc"/>
 
-        <!-- ══ CENTER: 感情の運動 (white/silver — distinct from all nodes) ══ -->
-        <circle class="circ-center-pulse" cx="600" cy="305" r="130" fill="none"
-                stroke="rgba(200,220,255,0.22)" stroke-width="1.5" stroke-dasharray="5 7"/>
-        <circle cx="600" cy="305" r="110" fill="url(#rg-ctr)"
-                stroke="rgba(200,218,255,0.88)" stroke-width="3" filter="url(#fctr)"/>
-        <circle cx="600" cy="305" r="88" fill="none"
-                stroke="rgba(180,200,240,0.28)" stroke-width="1.8"/>
-        <text x="600" y="289" text-anchor="middle" dominant-baseline="auto"
-              fill="rgba(225,235,255,1.0)" font-size="30" font-weight="900" letter-spacing="0.07em"
+        <!-- ══ CENTER: 感情の運動 (dominant focal point) ══ -->
+        <circle class="circ-center-pulse" cx="750" cy="360" r="172" fill="none"
+                stroke="rgba(200,220,255,0.24)" stroke-width="1.8" stroke-dasharray="5 7"/>
+        <circle cx="750" cy="360" r="145" fill="url(#rg-ctr)"
+                stroke="rgba(200,218,255,0.92)" stroke-width="3.5" filter="url(#fctr)"/>
+        <circle cx="750" cy="360" r="120" fill="none"
+                stroke="rgba(180,200,240,0.22)" stroke-width="1.5"/>
+        <circle cx="750" cy="360" r="92" fill="none"
+                stroke="rgba(180,200,240,0.18)" stroke-width="1.2"/>
+        <text x="750" y="343" text-anchor="middle" dominant-baseline="auto"
+              fill="rgba(230,240,255,1.0)" font-size="42" font-weight="900" letter-spacing="0.08em"
               font-family="Hiragino Sans,sans-serif" filter="url(#ftxt)">感情の</text>
-        <text x="600" y="325" text-anchor="middle" dominant-baseline="auto"
-              fill="rgba(225,235,255,1.0)" font-size="30" font-weight="900" letter-spacing="0.07em"
+        <text x="750" y="392" text-anchor="middle" dominant-baseline="auto"
+              fill="rgba(230,240,255,1.0)" font-size="42" font-weight="900" letter-spacing="0.08em"
               font-family="Hiragino Sans,sans-serif" filter="url(#ftxt)">運動</text>
 
         <!-- ══════════════════════════════════════════
-             NODES — name only inside circle
-             INFO PANELS — attached beside each node
+             NODES + INFO PANELS
              ══════════════════════════════════════════ -->
 
-        <!-- ── 推測 (cyan · cx=600 cy=125) ── -->
-        <circle cx="600" cy="125" r="75" fill="url(#rg-c)"
-                stroke="#00d4ff" stroke-width="3" filter="url(#fc)"/>
-        <circle cx="600" cy="125" r="60" fill="none"
-                stroke="rgba(0,212,255,0.30)" stroke-width="1.5"/>
-        <text x="600" y="125" text-anchor="middle" dominant-baseline="central"
-              fill="#00d4ff" font-size="44" font-weight="900" letter-spacing="0.04em"
+        <!-- ── 推測 (cyan · TOP) ── -->
+        <circle cx="750" cy="130" r="105" fill="url(#rg-c)"
+                stroke="#00d4ff" stroke-width="4" filter="url(#fc)"/>
+        <circle cx="750" cy="130" r="85" fill="none"
+                stroke="rgba(0,212,255,0.32)" stroke-width="1.5"/>
+        <text x="750" y="130" text-anchor="middle" dominant-baseline="central"
+              fill="#00d4ff" font-size="58" font-weight="900" letter-spacing="0.05em"
               font-family="Hiragino Sans,sans-serif" filter="url(#ftxt)">推測</text>
-        <!-- connector -->
-        <line x1="675" y1="125" x2="696" y2="125"
-              stroke="rgba(0,212,255,0.50)" stroke-width="2" stroke-dasharray="3 3"/>
-        <!-- info panel (right) — h=130, centered on cy=125 → y=60 -->
+        <line x1="855" y1="130" x2="871" y2="130" stroke="rgba(0,212,255,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
         <g filter="url(#fpanel)">
-          <rect x="696" y="58" width="290" height="134" rx="8"
-                fill="rgba(6,14,34,0.95)" stroke="rgba(0,212,255,0.35)" stroke-width="1.2"/>
-          <rect x="696" y="58" width="5"   height="134" rx="2" fill="#00d4ff" opacity="0.90"/>
+          <rect x="871" y="45" width="400" height="170" rx="10"
+                fill="rgba(6,14,34,0.96)" stroke="rgba(0,212,255,0.40)" stroke-width="1.4"/>
+          <rect x="871" y="45" width="6" height="170" rx="3" fill="#00d4ff" opacity="0.95"/>
         </g>
-        <text x="714" y="93" dominant-baseline="auto"
-              fill="#ffffff" font-size="22" font-weight="700" font-family="Hiragino Sans,sans-serif">「この先どうなる？」</text>
-        <text x="714" y="120" dominant-baseline="auto"
-              fill="#00d4ff" font-size="16" font-weight="700"
+        <text x="893" y="90" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「この先どうなる？」</text>
+        <text x="893" y="128" fill="#00d4ff" font-size="20" font-weight="700"
               font-family="Hiragino Sans,sans-serif">期待 · 不安 · 読み合い</text>
-        <text x="714" y="160" dominant-baseline="auto"
-              fill="rgba(195,238,255,0.96)" font-size="15" font-style="italic"
-              font-family="Hiragino Sans,sans-serif">例：Slay the Spire</text>
+        <text x="893" y="186" fill="rgba(195,238,255,0.96)" font-size="19" font-style="italic"
+              font-family="Hiragino Sans,sans-serif">例:Slay the Spire</text>
 
-        <!-- ── 観察 (yellow · cx=780 cy=305) ── -->
-        <circle cx="780" cy="305" r="75" fill="url(#rg-y)"
-                stroke="#ffd600" stroke-width="3" filter="url(#fy)"/>
-        <circle cx="780" cy="305" r="60" fill="none"
-                stroke="rgba(255,214,0,0.30)" stroke-width="1.5"/>
-        <text x="780" y="305" text-anchor="middle" dominant-baseline="central"
-              fill="#ffd600" font-size="44" font-weight="900" letter-spacing="0.04em"
+        <!-- ── 観察 (yellow · RIGHT) ── -->
+        <circle cx="980" cy="360" r="105" fill="url(#rg-y)"
+                stroke="#ffd600" stroke-width="4" filter="url(#fy)"/>
+        <circle cx="980" cy="360" r="85" fill="none"
+                stroke="rgba(255,214,0,0.32)" stroke-width="1.5"/>
+        <text x="980" y="360" text-anchor="middle" dominant-baseline="central"
+              fill="#ffd600" font-size="58" font-weight="900" letter-spacing="0.05em"
               font-family="Hiragino Sans,sans-serif" filter="url(#ftxt)">観察</text>
-        <!-- connector -->
-        <line x1="855" y1="305" x2="876" y2="305"
-              stroke="rgba(255,214,0,0.50)" stroke-width="2" stroke-dasharray="3 3"/>
-        <!-- info panel (right) — h=130, centered on cy=305 → y=240 -->
+        <line x1="1085" y1="360" x2="1089" y2="360" stroke="rgba(255,214,0,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
         <g filter="url(#fpanel)">
-          <rect x="876" y="238" width="290" height="134" rx="8"
-                fill="rgba(14,12,0,0.95)" stroke="rgba(255,214,0,0.35)" stroke-width="1.2"/>
-          <rect x="876" y="238" width="5"   height="134" rx="2" fill="#ffd600" opacity="0.90"/>
+          <rect x="1089" y="275" width="400" height="170" rx="10"
+                fill="rgba(14,12,0,0.96)" stroke="rgba(255,214,0,0.40)" stroke-width="1.4"/>
+          <rect x="1089" y="275" width="6" height="170" rx="3" fill="#ffd600" opacity="0.95"/>
         </g>
-        <text x="894" y="271" dominant-baseline="auto"
-              fill="#ffffff" font-size="22" font-weight="700" font-family="Hiragino Sans,sans-serif">「そういうことか！」</text>
-        <text x="894" y="298" dominant-baseline="auto"
-              fill="#ffd600" font-size="16" font-weight="700"
+        <text x="1111" y="320" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「そういうことか！」</text>
+        <text x="1111" y="358" fill="#ffd600" font-size="20" font-weight="700"
               font-family="Hiragino Sans,sans-serif">発見 · 理解 · 納得</text>
-        <text x="894" y="338" dominant-baseline="auto"
-              fill="rgba(255,250,205,0.96)" font-size="15" font-style="italic"
-              font-family="Hiragino Sans,sans-serif">例：ゼルダの謎解き</text>
+        <text x="1111" y="416" fill="rgba(255,250,205,0.96)" font-size="19" font-style="italic"
+              font-family="Hiragino Sans,sans-serif">例:ゼルダの謎解き</text>
 
-        <!-- ── 成長 (orange · cx=600 cy=485) ── -->
-        <circle cx="600" cy="485" r="75" fill="url(#rg-o)"
-                stroke="#ff6335" stroke-width="3" filter="url(#fo)"/>
-        <circle cx="600" cy="485" r="60" fill="none"
-                stroke="rgba(255,99,53,0.30)" stroke-width="1.5"/>
-        <text x="600" y="485" text-anchor="middle" dominant-baseline="central"
-              fill="#ff6335" font-size="44" font-weight="900" letter-spacing="0.04em"
+        <!-- ── 成長 (orange · BOTTOM) ── -->
+        <circle cx="750" cy="590" r="105" fill="url(#rg-o)"
+                stroke="#ff6335" stroke-width="4" filter="url(#fo)"/>
+        <circle cx="750" cy="590" r="85" fill="none"
+                stroke="rgba(255,99,53,0.32)" stroke-width="1.5"/>
+        <text x="750" y="590" text-anchor="middle" dominant-baseline="central"
+              fill="#ff6335" font-size="58" font-weight="900" letter-spacing="0.05em"
               font-family="Hiragino Sans,sans-serif" filter="url(#ftxt)">成長</text>
-        <!-- connector — panel is to the LEFT -->
-        <line x1="525" y1="485" x2="504" y2="485"
-              stroke="rgba(255,99,53,0.50)" stroke-width="2" stroke-dasharray="3 3"/>
-        <!-- info panel (left) — h=130, centered on cy=485 → y=420 -->
+        <line x1="645" y1="590" x2="629" y2="590" stroke="rgba(255,99,53,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
         <g filter="url(#fpanel)">
-          <rect x="214" y="418" width="290" height="134" rx="8"
-                fill="rgba(14,4,0,0.95)" stroke="rgba(255,99,53,0.35)" stroke-width="1.2"/>
-          <!-- right-side accent for left panels -->
-          <rect x="499" y="418" width="5"   height="134" rx="2" fill="#ff6335" opacity="0.90"/>
+          <rect x="229" y="505" width="400" height="170" rx="10"
+                fill="rgba(14,4,0,0.96)" stroke="rgba(255,99,53,0.40)" stroke-width="1.4"/>
+          <rect x="623" y="505" width="6" height="170" rx="3" fill="#ff6335" opacity="0.95"/>
         </g>
-        <text x="230" y="451" dominant-baseline="auto"
-              fill="#ffffff" font-size="22" font-weight="700" font-family="Hiragino Sans,sans-serif">「できるようになった！」</text>
-        <text x="230" y="478" dominant-baseline="auto"
-              fill="#ff6335" font-size="16" font-weight="700"
+        <text x="251" y="550" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「できるようになった！」</text>
+        <text x="251" y="588" fill="#ff6335" font-size="20" font-weight="700"
               font-family="Hiragino Sans,sans-serif">達成 · 悔しさ · 再挑戦</text>
-        <text x="230" y="518" dominant-baseline="auto"
-              fill="rgba(255,225,205,0.96)" font-size="15" font-style="italic"
-              font-family="Hiragino Sans,sans-serif">例：モンスターハンター</text>
+        <text x="251" y="646" fill="rgba(255,225,205,0.96)" font-size="19" font-style="italic"
+              font-family="Hiragino Sans,sans-serif">例:モンスターハンター</text>
 
-        <!-- ── 変化 (purple · cx=420 cy=305) ── -->
-        <circle cx="420" cy="305" r="75" fill="url(#rg-p)"
-                stroke="#c084fc" stroke-width="3" filter="url(#fp)"/>
-        <circle cx="420" cy="305" r="60" fill="none"
-                stroke="rgba(192,132,252,0.30)" stroke-width="1.5"/>
-        <text x="420" y="305" text-anchor="middle" dominant-baseline="central"
-              fill="#c084fc" font-size="44" font-weight="900" letter-spacing="0.04em"
+        <!-- ── 変化 (purple · LEFT) ── -->
+        <circle cx="520" cy="360" r="105" fill="url(#rg-p)"
+                stroke="#c084fc" stroke-width="4" filter="url(#fp)"/>
+        <circle cx="520" cy="360" r="85" fill="none"
+                stroke="rgba(192,132,252,0.32)" stroke-width="1.5"/>
+        <text x="520" y="360" text-anchor="middle" dominant-baseline="central"
+              fill="#c084fc" font-size="58" font-weight="900" letter-spacing="0.05em"
               font-family="Hiragino Sans,sans-serif" filter="url(#ftxt)">変化</text>
-        <!-- connector — panel is to the LEFT -->
-        <line x1="345" y1="305" x2="324" y2="305"
-              stroke="rgba(192,132,252,0.50)" stroke-width="2" stroke-dasharray="3 3"/>
-        <!-- info panel (left) — h=130, centered on cy=305 → y=240 -->
+        <line x1="415" y1="360" x2="411" y2="360" stroke="rgba(192,132,252,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
         <g filter="url(#fpanel)">
-          <rect x="34" y="238" width="290" height="134" rx="8"
-                fill="rgba(8,0,16,0.95)" stroke="rgba(192,132,252,0.35)" stroke-width="1.2"/>
-          <!-- right-side accent -->
-          <rect x="319" y="238" width="5"   height="134" rx="2" fill="#c084fc" opacity="0.90"/>
+          <rect x="11" y="275" width="400" height="170" rx="10"
+                fill="rgba(8,0,16,0.96)" stroke="rgba(192,132,252,0.40)" stroke-width="1.4"/>
+          <rect x="405" y="275" width="6" height="170" rx="3" fill="#c084fc" opacity="0.95"/>
         </g>
-        <text x="50" y="271" dominant-baseline="auto"
-              fill="#ffffff" font-size="22" font-weight="700" font-family="Hiragino Sans,sans-serif">「状況が変わった！」</text>
-        <text x="50" y="298" dominant-baseline="auto"
-              fill="#c084fc" font-size="16" font-weight="700"
+        <text x="33" y="320" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「状況が変わった！」</text>
+        <text x="33" y="358" fill="#c084fc" font-size="20" font-weight="700"
               font-family="Hiragino Sans,sans-serif">刺激 · 非日常 · 更新感</text>
-        <text x="50" y="338" dominant-baseline="auto"
-              fill="rgba(230,212,255,0.96)" font-size="15" font-style="italic"
-              font-family="Hiragino Sans,sans-serif">例：ローグライク</text>
+        <text x="33" y="416" fill="rgba(230,212,255,0.96)" font-size="19" font-style="italic"
+              font-family="Hiragino Sans,sans-serif">例:ローグライク</text>
       </svg>
     </div>
   </section>
@@ -638,10 +653,10 @@
   <!-- ========================================================
        SLIDE 08: BATTLE GAME TIMELINE
        ======================================================== -->
-  <section class="slide" id="slide-8">
+  <section class="slide" id="slide-9">
     <!-- Speaker note: 対戦ゲームはこの4要素がすべて詰まった教科書のような例。「勝利が嬉しい」のは勝ったからだけではなく、そこに至るプロセス全体があるから。 -->
     <div class="slide-header">
-      <span class="slide-num">08</span>
+      <span class="slide-num">09</span>
       <span class="slide-label">例：対戦ゲームにおける感情の運動</span>
     </div>
 
@@ -749,69 +764,153 @@
   <!-- ========================================================
        SLIDE 09-A: SIGNAL→EXPECT→PAYOFF→EMOTION (consolidated)
        ======================================================== -->
-  <section class="slide" id="slide-9a">
+  <section class="slide" id="slide-10a">
     <!-- Speaker note: シグナルが期待を生み、回収の質が感情の結果を決める。ユーザーは勝手に期待して勝手に失望する。 -->
     <div class="slide-header">
-      <span class="slide-num">09</span>
+      <span class="slide-num">10</span>
       <span class="slide-label">期待値コントロール</span>
     </div>
 
-    <div class="ep-alert">⚠ &nbsp;ユーザーは勝手に期待して、勝手に失望する</div>
+    <div class="ep-alert">
+      <div class="ep-alert-main">⚠ ユーザーは勝手に期待して、勝手に失望する</div>
+      <div class="ep-alert-sub">期待値はプレイが始まる前から動いている。<span class="hl-yellow">これがクソゲー化を生む最大の要因。</span></div>
+    </div>
 
     <div class="bal-stage">
-      <div class="bal-lead">プレイヤーは <b class="bal-exp">期待</b> と <b class="bal-pay">回収</b> を、無意識に<strong>天秤</strong>にかけている</div>
-
       <div class="bal-wrap">
-        <svg class="bal-svg" viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg">
+        <svg class="bal-svg" viewBox="0 0 1600 880" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="bal-beam" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#5a6b8a"/><stop offset="50%" stop-color="#9db2d8"/><stop offset="100%" stop-color="#5a6b8a"/>
+              <stop offset="0%" stop-color="#5a6b8a"/><stop offset="50%" stop-color="#e0e8f8"/><stop offset="100%" stop-color="#5a6b8a"/>
             </linearGradient>
             <linearGradient id="bal-pillar" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#26314c"/><stop offset="50%" stop-color="#475a82"/><stop offset="100%" stop-color="#26314c"/>
+              <stop offset="0%" stop-color="#26314c"/><stop offset="50%" stop-color="#6a83b8"/><stop offset="100%" stop-color="#26314c"/>
             </linearGradient>
-            <filter id="bal-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <linearGradient id="bal-base" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#6a83b8"/><stop offset="100%" stop-color="#26314c"/>
+            </linearGradient>
+            <radialGradient id="bal-pan-c" cx="50%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="rgba(120,235,255,0.7)"/>
+              <stop offset="60%" stop-color="rgba(0,212,255,0.30)"/>
+              <stop offset="100%" stop-color="rgba(0,212,255,0.05)"/>
+            </radialGradient>
+            <radialGradient id="bal-pan-g" cx="50%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="rgba(160,255,200,0.7)"/>
+              <stop offset="60%" stop-color="rgba(0,230,118,0.30)"/>
+              <stop offset="100%" stop-color="rgba(0,230,118,0.05)"/>
+            </radialGradient>
+            <filter id="bal-glow-c" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <filter id="bal-glow-g" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
           </defs>
 
-          <!-- base + pillar (fixed) -->
-          <ellipse cx="500" cy="498" rx="104" ry="12" fill="rgba(0,0,0,0.45)"/>
-          <polygon points="408,500 592,500 560,468 440,468" fill="#26314c" stroke="#475a82" stroke-width="1.5"/>
-          <rect x="491" y="150" width="18" height="320" rx="5" fill="url(#bal-pillar)"/>
-          <polygon points="500,134 480,162 520,162" fill="#9db2d8"/>
+          <!-- ─── BACKGROUND VERDICT LABELS (large, fixed position) ─── -->
+          <g font-family="Hiragino Sans,sans-serif">
 
-          <!-- seesaw group: gently oscillates around the pivot (500,150) -->
-          <g>
-            <animateTransform attributeName="transform" type="rotate"
-              values="-3.2 500 150; 3.2 500 150; -3.2 500 150" dur="5.5s" repeatCount="indefinite" calcMode="spline"
-              keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1"/>
-            <!-- chains -->
-            <g stroke="#7d93bd" stroke-width="2">
-              <line x1="195" y1="150" x2="159" y2="284"/>
-              <line x1="195" y1="150" x2="231" y2="284"/>
-              <line x1="805" y1="150" x2="769" y2="284"/>
-              <line x1="805" y1="150" x2="841" y2="284"/>
+            <!-- ═══ LEFT VERDICT GROUP — bright when 期待 heavy (Phase 1) ═══ -->
+            <g>
+              <animate attributeName="opacity"
+                values="1; 1; 0.22; 0.22; 1"
+                keyTimes="0; 0.42; 0.55; 0.92; 1"
+                dur="8s" repeatCount="indefinite"/>
+              <text x="240" y="616" text-anchor="middle" font-weight="700" font-size="32" fill="#80e0ff">プレイ前に膨らむ想像</text>
+              <text x="240" y="654" text-anchor="middle" font-size="23" fill="#a8b8d8">トレーラー ／ 口コミ ／ 世界観</text>
+              <line x1="100" y1="682" x2="380" y2="682" stroke="rgba(255,107,107,0.45)" stroke-width="1.5" stroke-dasharray="3 5"/>
+              <text x="240" y="744" text-anchor="middle" font-weight="900" font-size="68" fill="#ff6b6b">✗ クソゲー</text>
+              <text x="240" y="790" text-anchor="middle" font-size="22" fill="#ff9da6" font-weight="700">期待が勝ちすぎる → バランス崩壊</text>
             </g>
-            <!-- beam -->
-            <line x1="195" y1="150" x2="805" y2="150" stroke="url(#bal-beam)" stroke-width="12" stroke-linecap="round"/>
-            <circle cx="500" cy="150" r="14" fill="#b8c8e8" stroke="#5a6b8a" stroke-width="2"/>
-            <!-- left pan: 期待 -->
-            <path d="M150,284 Q195,322 240,284" fill="none" stroke="#7d93bd" stroke-width="3"/>
-            <circle cx="195" cy="266" r="47" fill="rgba(0,212,255,0.16)" stroke="#00d4ff" stroke-width="2.5" filter="url(#bal-glow)"/>
-            <text x="195" y="275" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="24" fill="#00d4ff">期待</text>
-            <!-- right pan: 回収 -->
-            <path d="M760,284 Q805,322 850,284" fill="none" stroke="#7d93bd" stroke-width="3"/>
-            <circle cx="805" cy="266" r="47" fill="rgba(0,230,118,0.18)" stroke="#00e676" stroke-width="2.5" filter="url(#bal-glow)"/>
-            <text x="805" y="275" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="24" fill="#00e676">回収</text>
+
+            <!-- ═══ RIGHT VERDICT GROUP — bright when 回収 heavy (Phase 2) ═══ -->
+            <g>
+              <animate attributeName="opacity"
+                values="0.22; 0.22; 1; 1; 0.22"
+                keyTimes="0; 0.42; 0.55; 0.92; 1"
+                dur="8s" repeatCount="indefinite"/>
+              <text x="1360" y="616" text-anchor="middle" font-weight="700" font-size="32" fill="#9affc6">実際にプレイして得る体験</text>
+              <text x="1360" y="654" text-anchor="middle" font-size="23" fill="#a8b8d8">操作感 ／ 達成感 ／ ストーリー</text>
+              <line x1="1220" y1="682" x2="1500" y2="682" stroke="rgba(0,230,118,0.45)" stroke-width="1.5" stroke-dasharray="3 5"/>
+              <text x="1360" y="744" text-anchor="middle" font-weight="900" font-size="68" fill="#00e676">✓ 面白い</text>
+              <text x="1360" y="790" text-anchor="middle" font-size="22" fill="#9affc6" font-weight="700">回収が期待を ちょうど超える → 釣り合う</text>
+              <text x="1360" y="822" text-anchor="middle" font-size="18" fill="#7a9a8a" font-style="italic">※ 超えすぎると寿命が短く、別の意味でクソゲーに</text>
+            </g>
+
+            <!-- ═══ HEAVY-SIDE INDICATORS ═══ -->
+            <!-- Left "重い" arrow: visible in Phase 1 -->
+            <g>
+              <animate attributeName="opacity"
+                values="1; 1; 0; 0; 1"
+                keyTimes="0; 0.42; 0.55; 0.92; 1"
+                dur="8s" repeatCount="indefinite"/>
+              <text x="500" y="490" text-anchor="start" font-size="38" font-weight="900" fill="#ff6b6b">← 期待が重い</text>
+            </g>
+            <!-- Right "重い" arrow: visible in Phase 2 -->
+            <g>
+              <animate attributeName="opacity"
+                values="0; 0; 1; 1; 0"
+                keyTimes="0; 0.42; 0.55; 0.92; 1"
+                dur="8s" repeatCount="indefinite"/>
+              <text x="1100" y="430" text-anchor="end" font-size="38" font-weight="900" fill="#00e676">回収が重い →</text>
+            </g>
           </g>
 
-          <!-- outcome verdicts (fixed, below each pan) -->
-          <text x="195" y="392" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="25" fill="#ff6b6b">✗ クソゲー</text>
-          <text x="195" y="420" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-size="14" fill="#c0d2ee">期待だけ高くて裏切られる</text>
-          <text x="805" y="392" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="25" fill="#00e676">✓ 面白い</text>
-          <text x="805" y="420" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-size="14" fill="#c0d2ee">期待を超えて回収する</text>
+          <!-- ─── BASE + PILLAR (fixed) ─── -->
+          <ellipse cx="800" cy="710" rx="220" ry="18" fill="rgba(0,0,0,0.55)"/>
+          <polygon points="620,720 980,720 920,640 680,640" fill="url(#bal-base)" stroke="#5a73a8" stroke-width="2.5"/>
+          <rect x="780" y="220" width="40" height="430" rx="10" fill="url(#bal-pillar)" stroke="#5a73a8" stroke-width="2"/>
+          <!-- pivot cap (triangular notch on top of pillar) -->
+          <polygon points="800,190 768,232 832,232" fill="#e0e8f8" stroke="#5a73a8" stroke-width="2"/>
 
-          <!-- which side is heavier? hint -->
-          <text x="500" y="470" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="700" font-size="15" fill="#93a8d2">重い方（＝大きい方）に傾く</text>
+          <!-- ─── SEESAW (animated rotation around pivot 800,220) ─── -->
+          <g>
+            <animateTransform attributeName="transform" type="rotate"
+              values="-7 800 220; -7 800 220; 3 800 220; 3 800 220; -7 800 220"
+              keyTimes="0; 0.42; 0.55; 0.92; 1"
+              dur="8s" repeatCount="indefinite" calcMode="spline"
+              keySplines="0 0 1 1; 0.42 0 0.58 1; 0 0 1 1; 0.42 0 0.58 1"/>
+
+            <!-- CHAINS: thick + bright for visibility -->
+            <g stroke="#e8efff" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.92">
+              <line x1="280" y1="220" x2="216" y2="400"/>
+              <line x1="280" y1="220" x2="344" y2="400"/>
+              <line x1="1320" y1="220" x2="1256" y2="400"/>
+              <line x1="1320" y1="220" x2="1384" y2="400"/>
+            </g>
+            <!-- chain link ovals — brighter -->
+            <g fill="#e8efff" opacity="0.95">
+              <ellipse cx="252" cy="298" rx="7" ry="10" transform="rotate(20 252 298)"/>
+              <ellipse cx="308" cy="298" rx="7" ry="10" transform="rotate(-20 308 298)"/>
+              <ellipse cx="240" cy="358" rx="7" ry="10" transform="rotate(20 240 358)"/>
+              <ellipse cx="320" cy="358" rx="7" ry="10" transform="rotate(-20 320 358)"/>
+              <ellipse cx="1292" cy="298" rx="7" ry="10" transform="rotate(20 1292 298)"/>
+              <ellipse cx="1348" cy="298" rx="7" ry="10" transform="rotate(-20 1348 298)"/>
+              <ellipse cx="1280" cy="358" rx="7" ry="10" transform="rotate(20 1280 358)"/>
+              <ellipse cx="1360" cy="358" rx="7" ry="10" transform="rotate(-20 1360 358)"/>
+            </g>
+
+            <!-- BEAM (very thick, metallic) -->
+            <line x1="280" y1="220" x2="1320" y2="220" stroke="url(#bal-beam)" stroke-width="22" stroke-linecap="round"/>
+            <!-- pivot bearing (the joint on the beam) -->
+            <circle cx="800" cy="220" r="26" fill="#e0e8f8" stroke="#5a73a8" stroke-width="3"/>
+            <circle cx="800" cy="220" r="10" fill="#5a73a8"/>
+
+            <!-- ═══ LEFT PAN: 期待 (cyan ring × dark fill for contrast) ═══ -->
+            <!-- bowl outer bottom curve -->
+            <path d="M 152 400 Q 152 480 280 502 Q 408 480 408 400 Z"
+                  fill="rgba(0,212,255,0.06)" stroke="#00d4ff" stroke-width="4"/>
+            <!-- bowl rim (front ellipse) -->
+            <ellipse cx="280" cy="400" rx="128" ry="18" fill="rgba(0,212,255,0.18)" stroke="#00d4ff" stroke-width="3"/>
+            <!-- inner disk — DARK fill so cyan/white text reads -->
+            <circle cx="280" cy="376" r="92" fill="#04223a" stroke="#00d4ff" stroke-width="6" filter="url(#bal-glow-c)"/>
+            <circle cx="280" cy="376" r="78" fill="none" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+            <text x="280" y="395" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="56" fill="#ffffff">期待</text>
+
+            <!-- ═══ RIGHT PAN: 回収 (green ring × dark fill) ═══ -->
+            <path d="M 1192 400 Q 1192 480 1320 502 Q 1448 480 1448 400 Z"
+                  fill="rgba(0,230,118,0.06)" stroke="#00e676" stroke-width="4"/>
+            <ellipse cx="1320" cy="400" rx="128" ry="18" fill="rgba(0,230,118,0.18)" stroke="#00e676" stroke-width="3"/>
+            <circle cx="1320" cy="376" r="92" fill="#042818" stroke="#00e676" stroke-width="6" filter="url(#bal-glow-g)"/>
+            <circle cx="1320" cy="376" r="78" fill="none" stroke="rgba(0,230,118,0.35)" stroke-width="1.5"/>
+            <text x="1320" y="395" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="56" fill="#ffffff">回収</text>
+          </g>
         </svg>
       </div>
 
@@ -823,10 +922,10 @@
   <!-- ========================================================
        SLIDE 12: DESIGN DOMAINS
        ======================================================== -->
-  <section class="slide" id="slide-12">
+  <section class="slide" id="slide-11">
     <!-- Speaker note: 面白さは一つの設計から来ない。複数の設計領域が4要素に流れ込み、感情の運動を生み出す。この構造を理解することで、「どこを直せば面白くなるか」が見えてくる。 -->
     <div class="slide-header">
-      <span class="slide-num">12</span>
+      <span class="slide-num">11</span>
       <span class="slide-label">設計領域として整理する</span>
     </div>
 
@@ -835,59 +934,122 @@
     </div>
 
     <div class="bull-wrap">
-      <svg class="bull-svg" viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg">
+      <svg class="bull-svg" viewBox="0 0 1500 720" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="bull-core" cx="50%" cy="42%" r="60%">
             <stop offset="0%"  stop-color="#063048" stop-opacity="0.96"/>
             <stop offset="55%" stop-color="#04212f" stop-opacity="0.9"/>
             <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.30"/>
           </radialGradient>
-          <filter id="bg-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <filter id="bg-soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+          <filter id="bg-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="bg-ctr" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="20" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="ftxt2" x="-15%" y="-40%" width="130%" height="180%">
+            <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#000918" flood-opacity="1.0"/>
+          </filter>
         </defs>
 
-        <!-- target bands -->
-        <circle cx="500" cy="300" r="292" fill="rgba(255,214,0,0.025)"/>
-        <circle cx="500" cy="300" r="292" fill="none" stroke="rgba(255,214,0,0.22)" stroke-width="1.5" stroke-dasharray="3 9"/>
-        <circle cx="500" cy="300" r="160" fill="rgba(0,212,255,0.03)"/>
-        <circle cx="500" cy="300" r="160" fill="none" stroke="rgba(0,212,255,0.28)" stroke-width="1.5" stroke-dasharray="3 9"/>
+        <!-- ─── Background concentric rings ─── -->
+        <circle cx="750" cy="360" r="320" fill="rgba(0,15,42,0.40)"/>
+        <circle cx="750" cy="360" r="320" fill="none" stroke="rgba(255,214,0,0.20)" stroke-width="1.5" stroke-dasharray="3 9"/>
+        <circle cx="750" cy="360" r="200" fill="rgba(0,212,255,0.04)"/>
+        <circle cx="750" cy="360" r="200" fill="none" stroke="rgba(0,212,255,0.28)" stroke-width="1.5" stroke-dasharray="3 9"/>
 
-        <!-- radial converging lines (domain → center) -->
-        <g stroke="rgba(255,255,255,0.14)" stroke-width="1.5" stroke-dasharray="2 7">
-          <line x1="500" y1="60"  x2="500" y2="205"/>
-          <line x1="712" y1="178" x2="587" y2="250"/>
-          <line x1="712" y1="422" x2="587" y2="350"/>
-          <line x1="500" y1="540" x2="500" y2="395"/>
-          <line x1="288" y1="422" x2="413" y2="350"/>
-          <line x1="288" y1="178" x2="413" y2="250"/>
+        <!-- ═══ 6 RADIAL LINES (domain → center, color-coded by primary element) ═══
+             Each pill is at distance 320 from center. Each line ends at the center disk edge (r=115). -->
+        <g stroke-width="3" stroke-dasharray="6 5" stroke-linecap="round">
+          <!-- top: ゲームデザイン → neutral (umbrella) -->
+          <line x1="750" y1="68"  x2="750" y2="245" stroke="rgba(220,232,255,0.55)"/>
+          <!-- upper-right: レベルデザイン → orange (成長) -->
+          <line x1="1015" y1="216" x2="828" y2="294" stroke="rgba(255,99,53,0.55)"/>
+          <!-- lower-right: ナラティブ → cyan (推測) -->
+          <line x1="1015" y1="504" x2="828" y2="426" stroke="rgba(0,212,255,0.55)"/>
+          <!-- bottom: 報酬設計 → orange (成長) -->
+          <line x1="750" y1="652" x2="750" y2="475" stroke="rgba(255,99,53,0.55)"/>
+          <!-- lower-left: 成長設計 → orange (成長) -->
+          <line x1="485" y1="504" x2="672" y2="426" stroke="rgba(255,99,53,0.55)"/>
+          <!-- upper-left: 運用設計 → purple (変化) -->
+          <line x1="485" y1="216" x2="672" y2="294" stroke="rgba(192,132,252,0.55)"/>
         </g>
 
-        <!-- 6 design-domain pills (outer ring) -->
-        <g font-family="Hiragino Sans,sans-serif" font-weight="700" font-size="18">
-          <g><rect x="412" y="6"   width="176" height="44" rx="22" fill="#121a2c" stroke="rgba(255,214,0,0.4)"/><text x="500" y="34" text-anchor="middle" fill="#eef3ff">ゲームデザイン</text></g>
-          <g><rect x="624" y="140" width="176" height="44" rx="22" fill="#121a2c" stroke="rgba(255,214,0,0.4)"/><text x="712" y="168" text-anchor="middle" fill="#eef3ff">レベルデザイン</text></g>
-          <g><rect x="624" y="400" width="176" height="44" rx="22" fill="#121a2c" stroke="rgba(255,214,0,0.4)"/><text x="712" y="428" text-anchor="middle" fill="#eef3ff">ナラティブ</text></g>
-          <g><rect x="412" y="518" width="176" height="44" rx="22" fill="#121a2c" stroke="rgba(255,214,0,0.4)"/><text x="500" y="546" text-anchor="middle" fill="#eef3ff">報酬設計</text></g>
-          <g><rect x="200" y="400" width="176" height="44" rx="22" fill="#121a2c" stroke="rgba(255,214,0,0.4)"/><text x="288" y="428" text-anchor="middle" fill="#eef3ff">成長設計</text></g>
-          <g><rect x="200" y="140" width="176" height="44" rx="22" fill="#121a2c" stroke="rgba(255,214,0,0.4)"/><text x="288" y="168" text-anchor="middle" fill="#eef3ff">運用設計</text></g>
+        <!-- ═══ 6 DESIGN-DOMAIN PILLS (outer ring, color-coded border) ═══ -->
+        <g font-family="Hiragino Sans,sans-serif" font-weight="800" font-size="26">
+          <!-- ゲームデザイン (top, neutral umbrella) -->
+          <g>
+            <rect x="620" y="42" width="260" height="60" rx="30" fill="#0e1626" stroke="rgba(220,232,255,0.75)" stroke-width="2.2"/>
+            <text x="750" y="82" text-anchor="middle" fill="#eef3ff">ゲームデザイン</text>
+          </g>
+          <!-- レベルデザイン (upper-right, orange) -->
+          <g>
+            <rect x="885" y="190" width="260" height="60" rx="30" fill="#0e1626" stroke="rgba(255,99,53,0.75)" stroke-width="2.2"/>
+            <text x="1015" y="230" text-anchor="middle" fill="#eef3ff">レベルデザイン</text>
+          </g>
+          <!-- ナラティブ (lower-right, cyan) -->
+          <g>
+            <rect x="885" y="478" width="260" height="60" rx="30" fill="#0e1626" stroke="rgba(0,212,255,0.75)" stroke-width="2.2"/>
+            <text x="1015" y="518" text-anchor="middle" fill="#eef3ff">ナラティブ</text>
+          </g>
+          <!-- 報酬設計 (bottom, orange) -->
+          <g>
+            <rect x="620" y="626" width="260" height="60" rx="30" fill="#0e1626" stroke="rgba(255,99,53,0.75)" stroke-width="2.2"/>
+            <text x="750" y="666" text-anchor="middle" fill="#eef3ff">報酬設計</text>
+          </g>
+          <!-- 成長設計 (lower-left, orange) -->
+          <g>
+            <rect x="355" y="478" width="260" height="60" rx="30" fill="#0e1626" stroke="rgba(255,99,53,0.75)" stroke-width="2.2"/>
+            <text x="485" y="518" text-anchor="middle" fill="#eef3ff">成長設計</text>
+          </g>
+          <!-- 運用設計 (upper-left, purple) -->
+          <g>
+            <rect x="355" y="190" width="260" height="60" rx="30" fill="#0e1626" stroke="rgba(192,132,252,0.75)" stroke-width="2.2"/>
+            <text x="485" y="230" text-anchor="middle" fill="#eef3ff">運用設計</text>
+          </g>
         </g>
 
-        <!-- 4 element nodes (inner ring) -->
-        <g font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="23">
-          <g filter="url(#bg-glow)"><circle cx="500" cy="140" r="44" fill="#0b1828" stroke="#00d4ff" stroke-width="2.5"/><text x="500" y="149" text-anchor="middle" fill="#00d4ff">推測</text></g>
-          <g filter="url(#bg-glow)"><circle cx="660" cy="300" r="44" fill="#181505" stroke="#ffd600" stroke-width="2.5"/><text x="660" y="309" text-anchor="middle" fill="#ffd600">観察</text></g>
-          <g filter="url(#bg-glow)"><circle cx="500" cy="460" r="44" fill="#190b05" stroke="#ff6335" stroke-width="2.5"/><text x="500" y="469" text-anchor="middle" fill="#ff6335">成長</text></g>
-          <g filter="url(#bg-glow)"><circle cx="340" cy="300" r="44" fill="#120920" stroke="#c084fc" stroke-width="2.5"/><text x="340" y="309" text-anchor="middle" fill="#c084fc">変化</text></g>
+        <!-- ═══ 4 ELEMENT NODES (middle ring, large + glowing) ═══ -->
+        <g font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="40">
+          <!-- 推測 (cyan, top) -->
+          <g filter="url(#bg-glow)">
+            <circle cx="750" cy="200" r="80" fill="#0b1828" stroke="#00d4ff" stroke-width="4"/>
+            <circle cx="750" cy="200" r="64" fill="none" stroke="rgba(0,212,255,0.30)" stroke-width="1.5"/>
+            <text x="750" y="213" text-anchor="middle" fill="#00d4ff" filter="url(#ftxt2)">推測</text>
+          </g>
+          <!-- 観察 (yellow, right) -->
+          <g filter="url(#bg-glow)">
+            <circle cx="950" cy="360" r="80" fill="#181505" stroke="#ffd600" stroke-width="4"/>
+            <circle cx="950" cy="360" r="64" fill="none" stroke="rgba(255,214,0,0.30)" stroke-width="1.5"/>
+            <text x="950" y="373" text-anchor="middle" fill="#ffd600" filter="url(#ftxt2)">観察</text>
+          </g>
+          <!-- 成長 (orange, bottom) -->
+          <g filter="url(#bg-glow)">
+            <circle cx="750" cy="520" r="80" fill="#190b05" stroke="#ff6335" stroke-width="4"/>
+            <circle cx="750" cy="520" r="64" fill="none" stroke="rgba(255,99,53,0.30)" stroke-width="1.5"/>
+            <text x="750" y="533" text-anchor="middle" fill="#ff6335" filter="url(#ftxt2)">成長</text>
+          </g>
+          <!-- 変化 (purple, left) -->
+          <g filter="url(#bg-glow)">
+            <circle cx="550" cy="360" r="80" fill="#120920" stroke="#c084fc" stroke-width="4"/>
+            <circle cx="550" cy="360" r="64" fill="none" stroke="rgba(192,132,252,0.30)" stroke-width="1.5"/>
+            <text x="550" y="373" text-anchor="middle" fill="#c084fc" filter="url(#ftxt2)">変化</text>
+          </g>
         </g>
 
-        <!-- center bullseye = 面白い -->
-        <circle cx="500" cy="300" r="90" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.6">
-          <animate attributeName="r" values="90;135" dur="3.2s" repeatCount="indefinite"/>
+        <!-- ═══ 4 SHORT ARROWS (element → center, suggests final convergence) ═══ -->
+        <g stroke-width="2.5" stroke-dasharray="4 4">
+          <line x1="750" y1="285" x2="750" y2="250" stroke="rgba(0,212,255,0.55)"/>
+          <line x1="865" y1="360" x2="830" y2="360" stroke="rgba(255,214,0,0.55)"/>
+          <line x1="750" y1="435" x2="750" y2="470" stroke="rgba(255,99,53,0.55)"/>
+          <line x1="635" y1="360" x2="670" y2="360" stroke="rgba(192,132,252,0.55)"/>
+        </g>
+
+        <!-- ═══ CENTER BULLSEYE = 面白い (dominant) ═══ -->
+        <circle cx="750" cy="360" r="115" fill="none" stroke="#00d4ff" stroke-width="2.5" opacity="0.55">
+          <animate attributeName="r" values="115;175" dur="3.2s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="0.55;0" dur="3.2s" repeatCount="indefinite"/>
         </circle>
-        <circle cx="500" cy="300" r="92" fill="url(#bull-core)" stroke="#00d4ff" stroke-width="3" filter="url(#bg-glow)"/>
-        <text x="500" y="294" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="34" fill="#eafaff">面白い</text>
-        <text x="500" y="324" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="700" font-size="14" fill="rgba(180,230,255,0.95)">＝ 感情の運動</text>
+        <circle cx="750" cy="360" r="115" fill="url(#bull-core)" stroke="#00d4ff" stroke-width="4" filter="url(#bg-ctr)"/>
+        <circle cx="750" cy="360" r="92" fill="none" stroke="rgba(0,212,255,0.25)" stroke-width="1.5"/>
+        <text x="750" y="352" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="48" fill="#eafaff" filter="url(#ftxt2)">面白い</text>
+        <text x="750" y="392" text-anchor="middle" font-family="Hiragino Sans,sans-serif" font-weight="700" font-size="19" fill="rgba(180,230,255,0.95)">＝ 感情の運動</text>
       </svg>
     </div>
   </section>
@@ -896,10 +1058,10 @@
   <!-- ========================================================
        SLIDE B: NON-GAME APPLICATIONS (Copilot B sample)
        ======================================================== -->
-  <section class="slide" id="slide-apply">
+  <section class="slide" id="slide-12">
     <!-- Speaker note: この構造はゲームだけでなく、プロダクト・教育・組織にも応用できる。自分ごとに引きつけてもらうための1枚。 -->
     <div class="slide-header">
-      <span class="slide-num">13</span>
+      <span class="slide-num">12</span>
       <span class="slide-label">この構造はゲームだけではない</span>
     </div>
 
@@ -910,7 +1072,22 @@
            <img class="apply-thumb" src="images/xxx.jpg" alt="..."> -->
 
       <div class="apply-card">
-        <div class="apply-thumb" data-ph="プロダクト画像">📱</div>
+        <div class="apply-thumb" data-ph="使うほど馴染む">
+          <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="prod-g" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="rgba(0,212,255,0.30)"/>
+                <stop offset="100%" stop-color="rgba(0,212,255,0)"/>
+              </linearGradient>
+            </defs>
+            <line x1="10" y1="88" x2="230" y2="88" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+            <path d="M 10 80 Q 60 78 90 50 Q 130 25 230 22 L 230 88 L 10 88 Z" fill="url(#prod-g)"/>
+            <path d="M 10 80 Q 60 78 90 50 Q 130 25 230 22" stroke="#00d4ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="10" cy="80" r="3" fill="#00d4ff" opacity="0.55"/>
+            <circle cx="230" cy="22" r="5" fill="#00d4ff"/>
+            <circle cx="230" cy="22" r="10" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+          </svg>
+        </div>
         <div class="apply-body">
           <div class="apply-name">プロダクト</div>
           <div class="apply-desc">オンボーディング設計</div>
@@ -919,7 +1096,16 @@
       </div>
 
       <div class="apply-card">
-        <div class="apply-thumb" data-ph="マーケ画像">📣</div>
+        <div class="apply-thumb" data-ph="期待を高める">
+          <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="88" x2="230" y2="88" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+            <path d="M 10 78 Q 25 78 35 55 Q 50 78 65 78 Q 90 78 105 38 Q 125 78 145 78 Q 180 78 210 18" stroke="#ff6335" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="35" cy="55" r="2.5" fill="#ff6335" opacity="0.5"/>
+            <circle cx="105" cy="38" r="3" fill="#ff6335" opacity="0.75"/>
+            <circle cx="210" cy="18" r="5" fill="#ff6335"/>
+            <circle cx="210" cy="18" r="10" fill="none" stroke="#ff6335" stroke-width="1.5" opacity="0.4"/>
+          </svg>
+        </div>
         <div class="apply-body">
           <div class="apply-name">マーケティング</div>
           <div class="apply-desc">期待値とストーリー設計</div>
@@ -928,7 +1114,17 @@
       </div>
 
       <div class="apply-card">
-        <div class="apply-thumb" data-ph="教育画像">📚</div>
+        <div class="apply-thumb" data-ph="わかった！の連続">
+          <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="88" x2="230" y2="88" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+            <path d="M 10 80 L 55 80 L 55 60 L 105 60 L 105 40 L 155 40 L 155 22 L 230 22" stroke="#ffd600" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <circle cx="55" cy="80" r="3" fill="#ffd600" opacity="0.55"/>
+            <circle cx="105" cy="60" r="3" fill="#ffd600" opacity="0.7"/>
+            <circle cx="155" cy="40" r="3" fill="#ffd600" opacity="0.85"/>
+            <circle cx="230" cy="22" r="5" fill="#ffd600"/>
+            <circle cx="230" cy="22" r="10" fill="none" stroke="#ffd600" stroke-width="1.5" opacity="0.4"/>
+          </svg>
+        </div>
         <div class="apply-body">
           <div class="apply-name">教育</div>
           <div class="apply-desc">学習体験の設計</div>
@@ -937,7 +1133,17 @@
       </div>
 
       <div class="apply-card">
-        <div class="apply-thumb" data-ph="組織画像">🏢</div>
+        <div class="apply-thumb" data-ph="成長実感">
+          <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="88" x2="230" y2="88" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+            <path d="M 10 82 C 60 82 100 60 230 18" stroke="#ff6335" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="10" cy="82" r="3" fill="#ff6335" opacity="0.45"/>
+            <circle cx="78" cy="74" r="3" fill="#ff6335" opacity="0.65"/>
+            <circle cx="148" cy="48" r="3.5" fill="#ff6335" opacity="0.85"/>
+            <circle cx="230" cy="18" r="5" fill="#ff6335"/>
+            <circle cx="230" cy="18" r="10" fill="none" stroke="#ff6335" stroke-width="1.5" opacity="0.4"/>
+          </svg>
+        </div>
         <div class="apply-body">
           <div class="apply-name">組織マネジメント</div>
           <div class="apply-desc">成長実感の設計</div>
@@ -946,7 +1152,19 @@
       </div>
 
       <div class="apply-card">
-        <div class="apply-thumb" data-ph="接客画像">🍽️</div>
+        <div class="apply-thumb" data-ph="期待を超える">
+          <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="88" x2="230" y2="88" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+            <!-- expectation (dashed cyan) -->
+            <path d="M 10 55 L 230 55" stroke="#00d4ff" stroke-width="2" stroke-dasharray="5 4" fill="none" opacity="0.7"/>
+            <text x="14" y="50" font-size="10" font-weight="700" fill="rgba(0,212,255,0.85)" font-family="Hiragino Sans,sans-serif">期待</text>
+            <!-- reality (solid green, exceeding) -->
+            <path d="M 10 65 Q 70 65 120 40 Q 175 18 230 20" stroke="#00e676" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <text x="195" y="14" font-size="10" font-weight="700" fill="#00e676" font-family="Hiragino Sans,sans-serif">体験</text>
+            <circle cx="230" cy="20" r="5" fill="#00e676"/>
+            <circle cx="230" cy="20" r="10" fill="none" stroke="#00e676" stroke-width="1.5" opacity="0.4"/>
+          </svg>
+        </div>
         <div class="apply-body">
           <div class="apply-name">接客・サービス</div>
           <div class="apply-desc">体験の起伏設計</div>
@@ -955,7 +1173,15 @@
       </div>
 
       <div class="apply-card">
-        <div class="apply-thumb" data-ph="イベント画像">🎪</div>
+        <div class="apply-thumb" data-ph="一体感">
+          <svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="10" y1="88" x2="230" y2="88" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+            <!-- 3 synchronized waves (people in sync) -->
+            <path d="M 10 70 Q 50 70 70 25 Q 100 70 130 25 Q 165 70 195 25 Q 220 70 230 60" stroke="#c084fc" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.95"/>
+            <path d="M 10 78 Q 50 78 70 33 Q 100 78 130 33 Q 165 78 195 33 Q 220 78 230 68" stroke="#c084fc" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.55"/>
+            <path d="M 10 86 Q 50 86 70 41 Q 100 86 130 41 Q 165 86 195 41 Q 220 86 230 76" stroke="#c084fc" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.30"/>
+          </svg>
+        </div>
         <div class="apply-body">
           <div class="apply-name">イベント・コミュニティ</div>
           <div class="apply-desc">一体感の設計</div>
@@ -970,7 +1196,7 @@
 
 
   <!-- ========================================================
-       SLIDE 13: CONCLUSION
+       SLIDE 12: CONCLUSION
        ======================================================== -->
   <section class="slide slide--conclusion" id="slide-13">
     <!-- Speaker note: 岡本吉起さんのフレームを出発点に、自分なりに体系化した結論。先人の言葉を受け取り、仕事を通して検証し、自分の言葉で語る。それがこの資料の核心。 -->
@@ -984,7 +1210,7 @@
       <p class="conc-main">
         ゲームの面白さとは、
         <strong class="big-line">推測・観察・成長・変化</strong>
-        によって起こる、<span class="hl-cyan">感情の運動</span>である。
+        によって起こる、<span class="hl-cyan nobr">感情の運動である。</span>
       </p>
       <p class="conc-by">
         — 先人の知見と、作る側として積み上げてきた実践から体系化した結論。<br>
@@ -995,7 +1221,7 @@
 
 
   <!-- ========================================================
-       SLIDE 14: FINAL
+       SLIDE 13: FINAL
        ======================================================== -->
   <section class="slide slide--final" id="slide-14">
     <!-- Speaker note: 締めは余韻を残す。「ゲームデザインとは感情の運動を設計すること」という一言だけが頭に残れば、この資料は成功。 -->
@@ -1004,8 +1230,8 @@
     <div class="final-content">
       <p class="final-label">GAME DESIGN PHILOSOPHY</p>
       <h2 class="final-main">
-        「面白い」とは、<br>
-        <span class="hl-cyan">感情の運動を設計</span>することである。
+        「面白い」を作るには、<br>
+        <span class="hl-cyan">感情の運動を設計</span><span class="nobr">すればいい。</span>
       </h2>
       <div class="final-detail">
         その構造はゲームに限らない。<br>
