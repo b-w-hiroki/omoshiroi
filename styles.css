@@ -2988,3 +2988,51 @@ img.ok-thumb {
 .slide--hook4 { padding-bottom: 44px; }
 .slide--hook4 .circ-wrap { min-height: 0; }
 .slide--hook4 .circ-svg { height: 100%; width: auto; }
+
+
+/* slide 8 — grouped mechanisms (入口 / 中核 / 出口) */
+.hookviz-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hookviz-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 12px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+.hookviz-group--core {
+  border-color: var(--cyan-border);
+  background: var(--cyan-dim);
+}
+.hookviz-gh {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--t2);
+  letter-spacing: 0.04em;
+}
+.hookviz-group--core .hookviz-gh { color: var(--t1); }
+.hookviz-gtag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--t3);
+}
+.hookviz-group--core .hookviz-gtag { color: var(--cyan); border-color: var(--cyan-border); }
+.hookviz-group .hookviz-row { gap: 0; }
+.hookviz-group .hookviz-l, .hookviz-group .hookviz-r { font-size: 17px; }
+.hookviz-group .hookviz-mech { font-size: 17px; padding: 6px 18px; }
+.hookviz-group--in .hookviz-mech,
+.hookviz-group--out .hookviz-mech { background: rgba(255,255,255,0.04); color: var(--t2); }
+.hl-t3 { color: var(--t3); }
+.hook-body { gap: 20px; }
