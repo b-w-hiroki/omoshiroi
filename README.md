@@ -82,8 +82,8 @@ npm install                      # pptxgenjs
 node export-pptx.js              # → presentation-export.pptx
 ```
 
-- 16:9、1スライド＝全面画像（2560×1440 JPEG）
-- →キーで進むサブステップ（06のチップ、12の先人カード）は 1ステップ＝1スライドに展開
+- 16:9、1スライド＝全面画像（2560×1440 JPEG）、1セクション＝1枚（22枚）
+- →キーで進むサブステップ（06のチップ、12の先人カード）は全部表示した状態で1枚にまとめる。`node export-pptx.js --steps` で1ステップ＝1枚に展開
 - 各スライドの `<!-- Speaker note -->` をスピーカーノートに転記
 - Google Slides で使う場合：Google ドライブにアップロード → 「Google スライドで開く」
 
