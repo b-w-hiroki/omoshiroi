@@ -55,12 +55,357 @@
 
 
   <!-- ========================================================
-       SLIDE 02: ASK — "面白い"とは？ (pause slide)
+       SLIDE 02: INTRO 1 — ゲーム、好きですか？
        ======================================================== -->
-  <section class="slide slide--ask" id="slide-2">
-    <!-- Speaker note: ここで一拍置く。「面白い」という言葉、誰もが日常で使うけれど、いざ説明しようとすると意外と難しい。問いを聴衆と共有してから本編に入る。 -->
+  <section class="slide slide--intro" id="slide-2">
+    <!-- Speaker note: 会場に問いかけて空気を作る。挙手してもらってもよい。好きな人もそうでない人も、この後の話は同じ土台で聞ける。 -->
     <div class="slide-header">
       <span class="slide-num">02</span>
+      <span class="slide-label">導入</span>
+    </div>
+
+    <div class="intro-bg-icons" aria-hidden="true">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <!-- controller (top-left) -->
+        <g transform="translate(120 120) rotate(-12)">
+          <path d="M0 20 Q0 0 22 0 H138 Q160 0 160 20 L172 66 Q174 86 156 86 Q142 86 132 70 L120 56 H40 L28 70 Q18 86 4 86 Q-14 86 -12 66 Z"/>
+          <path d="M40 22 v28 M26 36 h28"/><circle cx="122" cy="30" r="5"/><circle cx="138" cy="44" r="5"/><circle cx="106" cy="44" r="5"/><circle cx="122" cy="58" r="5"/>
+        </g>
+        <!-- dice (top-right) -->
+        <g transform="translate(1040 100) rotate(18)">
+          <rect x="0" y="0" width="90" height="90" rx="14"/>
+          <circle cx="24" cy="24" r="6" fill="#00d4ff"/><circle cx="66" cy="24" r="6" fill="#00d4ff"/><circle cx="45" cy="45" r="6" fill="#00d4ff"/><circle cx="24" cy="66" r="6" fill="#00d4ff"/><circle cx="66" cy="66" r="6" fill="#00d4ff"/>
+        </g>
+        <!-- joystick (bottom-left) -->
+        <g transform="translate(150 500) rotate(8)">
+          <rect x="0" y="70" width="120" height="44" rx="10"/><line x1="60" y1="70" x2="60" y2="18"/><circle cx="60" cy="14" r="14"/>
+          <circle cx="24" cy="92" r="6"/><circle cx="96" cy="92" r="6"/>
+        </g>
+        <!-- star (bottom-right) -->
+        <g transform="translate(1060 520) rotate(-10)">
+          <path d="M50 0 L64 34 L100 38 L72 62 L80 98 L50 80 L20 98 L28 62 L0 38 L36 34 Z"/>
+        </g>
+        <!-- coin (mid-right) -->
+        <g transform="translate(960 330)">
+          <circle cx="40" cy="40" r="38"/><circle cx="40" cy="40" r="26"/><path d="M40 24 v32 M30 32 h20 M30 48 h20"/>
+        </g>
+        <!-- handheld (mid-left) -->
+        <g transform="translate(60 320) rotate(-6)">
+          <rect x="0" y="0" width="150" height="80" rx="16"/><rect x="42" y="14" width="66" height="52" rx="6"/>
+          <path d="M20 30 v20 M10 40 h20"/><circle cx="126" cy="32" r="5"/><circle cx="138" cy="46" r="5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="intro-body">
+      <p class="intro-kicker">QUESTION</p>
+      <h2 class="intro-question">ゲーム、<br>好きですか？</h2>
+      <div class="intro-divider"></div>
+      <p class="intro-note">好きな人も、そうでもない人も。</p>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 03: INTRO 2 — ゲームっていろいろある（家庭用の画像）
+       ======================================================== -->
+  <section class="slide slide--intro" id="slide-3">
+    <!-- Speaker note: 「ゲーム」と一口に言っても幅が広い。家庭用のイメージを見せつつ、アーケード・PC・スマホなど種類を挙げ、次のスライドでソーシャルゲームに絞る。 -->
+    <!-- 画像差し替え: 写真を使う場合は .intro-visual 内の <svg> を
+         <img src="images/console.jpg" alt="家庭用ゲーム機"> に置き換えてください -->
+    <div class="slide-header">
+      <span class="slide-num">03</span>
+      <span class="slide-label">導入</span>
+    </div>
+
+    <div class="intro-split">
+      <div class="intro-split-text">
+        <p class="intro-kicker intro-kicker--left">VARIETY</p>
+        <h2 class="intro-headline">ゲームって、<br><span class="hl-cyan">いろいろ</span>ありますね</h2>
+        <ul class="intro-tags" aria-label="ゲームの種類">
+          <li class="intro-tag intro-tag--focus">家庭用</li>
+          <li class="intro-tag">携帯機</li>
+          <li class="intro-tag">アーケード</li>
+          <li class="intro-tag">PC</li>
+          <li class="intro-tag">スマホ</li>
+        </ul>
+      </div>
+
+      <figure class="intro-visual">
+        <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="家庭用ゲーム機のイラスト">
+          <!-- TV -->
+          <rect x="70" y="30" width="380" height="240" rx="16" fill="#0c1028" stroke="#00d4ff" stroke-width="3"/>
+          <rect x="90" y="50" width="340" height="200" rx="8" fill="#07091c" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+          <!-- screen content: simple platformer scene -->
+          <rect x="90" y="215" width="340" height="35" fill="rgba(0,212,255,0.12)"/>
+          <rect x="150" y="185" width="40" height="30" fill="#ffd600"/>
+          <rect x="190" y="185" width="40" height="30" fill="#ffd600" opacity="0.7"/>
+          <rect x="300" y="150" width="60" height="20" fill="#00e676" opacity="0.8"/>
+          <rect x="120" y="165" width="22" height="30" fill="#ff6335"/>
+          <rect x="126" y="153" width="12" height="12" fill="#ff6335"/>
+          <circle cx="330" cy="110" r="12" fill="#ffd600"/>
+          <circle cx="360" cy="90" r="8" fill="#ffd600" opacity="0.7"/>
+          <!-- TV stand -->
+          <rect x="230" y="270" width="60" height="18" fill="#111829" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+          <rect x="180" y="288" width="160" height="8" rx="4" fill="#111829" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+          <!-- console -->
+          <rect x="60" y="320" width="200" height="44" rx="8" fill="#111829" stroke="#00d4ff" stroke-width="2.5"/>
+          <rect x="80" y="336" width="70" height="12" rx="3" fill="rgba(0,212,255,0.25)"/>
+          <circle cx="236" cy="342" r="7" fill="#00e676"/>
+          <!-- controller -->
+          <path d="M300 330 Q300 316 316 316 H444 Q460 316 460 330 L470 370 Q472 386 456 386 Q444 386 436 372 L426 360 H334 L324 372 Q316 386 304 386 Q288 386 290 370 Z"
+                fill="#111829" stroke="#00d4ff" stroke-width="2.5"/>
+          <!-- d-pad -->
+          <rect x="332" y="332" width="10" height="30" rx="2" fill="#93a8d2"/>
+          <rect x="322" y="342" width="30" height="10" rx="2" fill="#93a8d2"/>
+          <!-- buttons -->
+          <circle cx="424" cy="340" r="6" fill="#ff6335"/>
+          <circle cx="438" cy="352" r="6" fill="#ffd600"/>
+          <circle cx="410" cy="352" r="6" fill="#00e676"/>
+          <circle cx="424" cy="364" r="6" fill="#00d4ff"/>
+          <!-- cable -->
+          <path d="M260 342 Q280 342 290 352" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="2"/>
+        </svg>
+        <figcaption class="intro-caption">家庭用ゲーム機</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 04: INTRO 3 — 今日のテーマ
+       ======================================================== -->
+  <section class="slide slide--intro slide--intro-topic" id="slide-4">
+    <!-- Speaker note: 対象を絞る。全部は語れないので、ソーシャルゲームの面白さの「一部」に限定することを最初に明言しておく。 -->
+    <div class="slide-header">
+      <span class="slide-num">04</span>
+      <span class="slide-label">今日のテーマ</span>
+    </div>
+
+    <div class="intro-body">
+      <p class="intro-kicker">TODAY'S TOPIC</p>
+      <p class="intro-topic-lead">今日は</p>
+      <h2 class="intro-topic-main"><span class="hl-cyan">ソーシャルゲーム</span>の<br>面白さの<span class="intro-topic-part">一部</span>を<br>お伝えします</h2>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 05: INTRO 4 — 自己紹介
+       ======================================================== -->
+  <section class="slide slide--intro" id="slide-5">
+    <!-- Speaker note: 自己紹介。ゲームとの関わりを中心に、この話をする立場を短く伝える。 -->
+    <!-- TODO: 以下のプレースホルダー（名前・所属・経歴・好きなゲーム）を実際の内容に差し替えてください -->
+    <div class="slide-header">
+      <span class="slide-num">05</span>
+      <span class="slide-label">自己紹介</span>
+    </div>
+
+    <div class="profile-body">
+      <div class="profile-avatar" aria-hidden="true">
+        <!-- 顔写真を使う場合: <img src="images/me.jpg" alt=""> に置き換え -->
+        <span class="profile-avatar-initial">?</span>
+      </div>
+
+      <div class="profile-main">
+        <p class="intro-kicker intro-kicker--left">ABOUT ME</p>
+        <h2 class="profile-name">お名前</h2>
+        <p class="profile-role">所属 / 役職</p>
+
+        <dl class="profile-list">
+          <div class="profile-item">
+            <dt>経歴</dt>
+            <dd>これまでの仕事や、ゲームとの関わりを1〜2行で</dd>
+          </div>
+          <div class="profile-item">
+            <dt>今やっていること</dt>
+            <dd>現在の仕事・活動を1行で</dd>
+          </div>
+          <div class="profile-item">
+            <dt>好きなゲーム</dt>
+            <dd>タイトルを2〜3本</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 06: INTRO 5 — ソーシャルゲームのイメージ
+       ======================================================== -->
+  <section class="slide slide--intro" id="slide-6" data-step-mode="cumulative">
+    <!-- Speaker note: 会場に聞く。→キーで1つずつ表示。「無料」「ガチャ」「ポチポチ」「課金」「時間がかかる」あたりが出てくるはず。出てきた言葉をそのまま拾う。 -->
+    <div class="slide-header">
+      <span class="slide-num">06</span>
+      <span class="slide-label">導入</span>
+    </div>
+
+    <div class="intro-body">
+      <p class="intro-kicker">QUESTION</p>
+      <h2 class="intro-headline intro-headline--center">ソーシャルゲームって、<br>どんなイメージですか？</h2>
+      <ul class="image-chips" aria-label="よくあるイメージ">
+        <li class="image-chip" data-step="0">無料</li>
+        <li class="image-chip" data-step="1">ガチャ</li>
+        <li class="image-chip" data-step="2">ポチポチゲー</li>
+        <li class="image-chip" data-step="3">課金</li>
+        <li class="image-chip" data-step="4">時間がかかる</li>
+        <li class="image-chip image-chip--more" data-step="5">…</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 07: INTRO 6 — 全部正解
+       ======================================================== -->
+  <section class="slide slide--intro" id="slide-7">
+    <!-- Speaker note: 否定しない。全部その通り。そのうえで「パチンコに似ている」と自分から言い切り、開発者側もパチンコを研究していると明かして笑いを取る。 -->
+    <div class="slide-header">
+      <span class="slide-num">07</span>
+      <span class="slide-label">導入</span>
+    </div>
+
+    <div class="intro-body">
+      <p class="intro-kicker">ANSWER</p>
+      <h2 class="intro-question">全部、<span class="maru">正解<svg class="maru-svg" viewBox="0 0 240 140" aria-hidden="true"><path d="M120 12 C60 10 18 40 20 72 C22 108 70 130 122 128 C176 126 222 100 220 68 C218 36 172 14 128 14" fill="none" stroke="#ff4444" stroke-width="7" stroke-linecap="round"/></svg></span>。</h2>
+      <div class="intro-divider"></div>
+      <p class="intro-note intro-note--lg">ソーシャルゲームと<span class="hl-yellow">パチンコ</span>は、似ています。<br>開発者も、パチンコを研究しています（笑）</p>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 08: INTRO 7 — パチンコとソーシャルゲームの「ハマり」
+       ======================================================== -->
+  <section class="slide slide--intro" id="slide-8">
+    <!-- Speaker note: ハマりの仕組みを5点で対比。射幸性・演出・小さな投資の積み上げ・無心で続く・やめどき不明。これらも確かに「面白さ」を構成する要素であることを認めたうえで、次で「でも、それだけではない」に持っていく。 -->
+    <div class="slide-header">
+      <span class="slide-num">08</span>
+      <span class="slide-label">ハマりの仕組み</span>
+    </div>
+
+    <div class="hook-body">
+      <h2 class="hook-title">パチンコとソーシャルゲームの<span class="hl-cyan">「ハマり」</span>は、同じ仕組みでできている</h2>
+
+      <div class="hookviz">
+        <!-- pachinko machine -->
+        <figure class="hookviz-fig hookviz-fig--pachi">
+          <svg viewBox="0 0 160 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="パチンコ台のイラスト">
+            <rect x="10" y="10" width="140" height="280" rx="10" fill="#111829" stroke="#ffd600" stroke-width="3"/>
+            <rect x="22" y="22" width="116" height="14" rx="4" fill="rgba(255,214,0,0.15)"/>
+            <circle cx="36" cy="29" r="4" fill="#ff4444"/><circle cx="52" cy="29" r="4" fill="#ffd600"/><circle cx="68" cy="29" r="4" fill="#00e676"/>
+            <circle cx="92" cy="29" r="4" fill="#ff4444"/><circle cx="108" cy="29" r="4" fill="#ffd600"/><circle cx="124" cy="29" r="4" fill="#00e676"/>
+            <circle cx="80" cy="118" r="62" fill="#07091c" stroke="rgba(255,214,0,0.45)" stroke-width="2"/>
+            <rect x="52" y="96" width="56" height="34" rx="4" fill="#0c1028" stroke="#ffd600" stroke-width="2"/>
+            <text x="80" y="119" text-anchor="middle" fill="#ffd600" font-size="18" font-weight="900" font-family="monospace">7 7 7</text>
+            <g fill="rgba(255,214,0,0.55)">
+              <circle cx="40" cy="80" r="2.5"/><circle cx="56" cy="70" r="2.5"/><circle cx="104" cy="70" r="2.5"/><circle cx="120" cy="80" r="2.5"/>
+              <circle cx="34" cy="120" r="2.5"/><circle cx="126" cy="120" r="2.5"/><circle cx="44" cy="150" r="2.5"/><circle cx="116" cy="150" r="2.5"/>
+              <circle cx="80" cy="150" r="2.5"/><circle cx="64" cy="160" r="2.5"/><circle cx="96" cy="160" r="2.5"/>
+            </g>
+            <rect x="22" y="196" width="116" height="34" rx="6" fill="#0c1028" stroke="rgba(255,214,0,0.35)" stroke-width="1.5"/>
+            <rect x="30" y="204" width="40" height="18" rx="3" fill="rgba(255,214,0,0.25)"/>
+            <rect x="22" y="242" width="116" height="34" rx="6" fill="#0c1028" stroke="rgba(255,214,0,0.35)" stroke-width="1.5"/>
+            <circle cx="120" cy="259" r="12" fill="#111829" stroke="#ffd600" stroke-width="3"/>
+            <circle cx="120" cy="259" r="4" fill="#ffd600"/>
+          </svg>
+          <figcaption class="hookviz-cap hookviz-cap--pachi">パチンコ</figcaption>
+        </figure>
+
+        <!-- shared mechanisms -->
+        <ul class="hookviz-rows" aria-label="共通するハマりの仕組み">
+          <li class="hookviz-row">
+            <span class="hookviz-l">大当たり抽選</span>
+            <span class="hookviz-mech">次こそ当たるかも</span>
+            <span class="hookviz-r">ガチャ・ドロップ</span>
+          </li>
+          <li class="hookviz-row">
+            <span class="hookviz-l">リーチ演出</span>
+            <span class="hookviz-mech">期待を煽る演出</span>
+            <span class="hookviz-r">ガチャ演出・虹エフェクト</span>
+          </li>
+          <li class="hookviz-row">
+            <span class="hookviz-l">貸玉 1,000円から</span>
+            <span class="hookviz-mech">小さな投資が積み上がる</span>
+            <span class="hookviz-r">120円の課金から</span>
+          </li>
+          <li class="hookviz-row">
+            <span class="hookviz-l">ハンドルを握るだけ</span>
+            <span class="hookviz-mech">無心でも続けられる</span>
+            <span class="hookviz-r">タップするだけ</span>
+          </li>
+          <li class="hookviz-row">
+            <span class="hookviz-l">「ここまで打ったし」</span>
+            <span class="hookviz-mech">やめどきが分からない</span>
+            <span class="hookviz-r">「ここまで育てたし」</span>
+          </li>
+        </ul>
+
+        <!-- smartphone -->
+        <figure class="hookviz-fig hookviz-fig--social">
+          <svg viewBox="0 0 160 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="スマートフォンのイラスト">
+            <rect x="26" y="10" width="108" height="280" rx="18" fill="#111829" stroke="#00d4ff" stroke-width="3"/>
+            <rect x="36" y="30" width="88" height="240" rx="8" fill="#07091c"/>
+            <rect x="62" y="16" width="36" height="6" rx="3" fill="rgba(0,212,255,0.35)"/>
+            <g stroke="#00d4ff" stroke-width="2" opacity="0.7">
+              <line x1="80" y1="60" x2="80" y2="44"/><line x1="80" y1="176" x2="80" y2="192"/>
+              <line x1="30" y1="118" x2="46" y2="118"/><line x1="114" y1="118" x2="130" y2="118"/>
+              <line x1="46" y1="84" x2="56" y2="94"/><line x1="114" y1="84" x2="104" y2="94"/>
+              <line x1="46" y1="152" x2="56" y2="142"/><line x1="114" y1="152" x2="104" y2="142"/>
+            </g>
+            <circle cx="80" cy="118" r="34" fill="#0c1028" stroke="#00d4ff" stroke-width="3"/>
+            <path d="M46 118 A34 34 0 0 1 114 118 Z" fill="rgba(0,212,255,0.25)"/>
+            <path d="M80 100 L85 112 L98 113 L88 121 L91 134 L80 127 L69 134 L72 121 L62 113 L75 112 Z" fill="#ffd600"/>
+            <rect x="46" y="206" width="68" height="16" rx="8" fill="rgba(0,212,255,0.18)" stroke="rgba(0,212,255,0.5)" stroke-width="1.5"/>
+            <text x="80" y="218" text-anchor="middle" fill="#00d4ff" font-size="10" font-weight="700" font-family="sans-serif">10連ガチャ</text>
+            <rect x="46" y="232" width="68" height="16" rx="8" fill="rgba(255,99,53,0.18)" stroke="rgba(255,99,53,0.5)" stroke-width="1.5"/>
+            <text x="80" y="244" text-anchor="middle" fill="#ff6335" font-size="10" font-weight="700" font-family="sans-serif">¥120</text>
+            <circle cx="80" cy="280" r="5" fill="none" stroke="rgba(0,212,255,0.45)" stroke-width="1.5"/>
+          </svg>
+          <figcaption class="hookviz-cap hookviz-cap--social">ソーシャルゲーム</figcaption>
+        </figure>
+      </div>
+
+      <p class="hook-conclusion">これも、<span class="hl-yellow">「面白さ」を構成する要素</span>のひとつです。</p>
+    </div>
+  </section>
+
+
+
+  <!-- ========================================================
+       SLIDE 09: INTRO 8 — でも、開発者はもっと考えている（本編へ）
+       ======================================================== -->
+  <section class="slide slide--intro slide--bridge" id="slide-9">
+    <!-- Speaker note: ここで導入を締める。ハマりの仕組みは「面白さ」の一部でしかない。開発者はそれ以外の部分をもっと考えている、という宣言で本編へ。 -->
+    <div class="slide-header">
+      <span class="slide-num">09</span>
+      <span class="slide-label">本編へ</span>
+    </div>
+
+    <div class="bridge-teaser" aria-hidden="true">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" font-family="Hiragino Sans,sans-serif" font-weight="900" font-size="44" text-anchor="middle" dominant-baseline="central">
+        <circle cx="640" cy="130" r="70" fill="none" stroke="#00d4ff" stroke-width="3"/><text x="640" y="130" fill="#00d4ff">推測</text>
+        <circle cx="1090" cy="360" r="70" fill="none" stroke="#ffd600" stroke-width="3"/><text x="1090" y="360" fill="#ffd600">観察</text>
+        <circle cx="640" cy="600" r="70" fill="none" stroke="#ff6335" stroke-width="3"/><text x="640" y="600" fill="#ff6335">成長</text>
+        <circle cx="190" cy="360" r="70" fill="none" stroke="#c084fc" stroke-width="3"/><text x="190" y="360" fill="#c084fc">変化</text>
+        <circle cx="640" cy="360" r="330" fill="none" stroke="rgba(0,212,255,0.6)" stroke-width="2" stroke-dasharray="6 14"/>
+      </svg>
+    </div>
+    <div class="intro-body">
+      <p class="intro-topic-lead">でも、</p>
+      <h2 class="intro-topic-main">ゲーム開発者は、<br><span class="hl-cyan">もっといろいろ</span>考えています。</h2>
+      <p class="bridge-next">▶ 本編へ</p>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 10: ASK — "面白い"とは？ (pause slide)
+       ======================================================== -->
+  <section class="slide slide--ask" id="slide-10">
+    <!-- Speaker note: ここで一拍置く。「面白い」という言葉、誰もが日常で使うけれど、いざ説明しようとすると意外と難しい。問いを聴衆と共有してから本編に入る。 -->
+    <div class="slide-header">
+      <span class="slide-num">10</span>
       <span class="slide-label">問い</span>
     </div>
 
@@ -92,50 +437,15 @@
   </section>
 
 
-  <!-- ========================================================
-       SLIDE 03: WHY THIS QUESTION
-       ======================================================== -->
-  <section class="slide" id="slide-3">
-    <!-- Speaker note: この問いを立てた個人的な背景。面白さの構造はゲームだけでなく、プロダクトやビジネスにも直結している。 -->
-    <div class="slide-header">
-      <span class="slide-num">03</span>
-      <span class="slide-label">なぜこの問いか</span>
-    </div>
-
-    <div class="why-body">
-      <div class="why-timeline">
-        <div class="timeline-item">
-          <div class="tl-dot tl-dot--c"></div>
-          <p class="tl-text">子どもの頃からゲームが好きで、<br><span class="hl-cyan">「なぜこれは面白いのか」</span>をずっと考えていた</p>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot tl-dot--y"></div>
-          <p class="tl-text">作る側になってわかった——<br><span class="hl-yellow">「面白さは設計できる」</span>という事実</p>
-        </div>
-        <div class="timeline-item">
-          <div class="tl-dot tl-dot--o"></div>
-          <p class="tl-text">その構造はゲームだけでなく、<br><span class="hl-orange">プロダクト・マーケ・教育・組織</span>にも使える</p>
-        </div>
-      </div>
-
-      <div class="why-question">
-        <p class="question-kicker">THE CORE QUESTION</p>
-        <p class="question-text">
-          「面白い」は<br>
-          <span class="hl-cyan nobr">偶然ではなく設計</span><span class="nobr">できる</span>
-        </p>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ========================================================
        SLIDE 03: OKAMOTO (SPECIAL — GOLD)
        ======================================================== -->
-  <section class="slide slide--okamoto" id="slide-4">
-    <!-- Speaker note: 岡本さんのフレームがこの資料の出発点。4段階の面白さは時系列で捉えることができる。 -->
+  <section class="slide slide--okamoto" id="slide-11">
+    <!-- Speaker note: 岡本さんのフレームがこの資料の出発点。ストII・バイオだけでなく、ソーシャルゲーム（モンスターストライク）も大ヒットさせた人。つまりソシャゲの面白さを語るのに最適な視点。4段階の面白さは時系列で捉えることができる。 -->
     <div class="slide-header">
-      <span class="slide-num">04</span>
+      <span class="slide-num">11</span>
       <span class="slide-label">岡本吉起さんの視点</span>
     </div>
 
@@ -247,10 +557,10 @@
   <!-- ========================================================
        SLIDE 04: LEGENDS — portrait card style
        ======================================================== -->
-  <section class="slide" id="slide-5">
+  <section class="slide" id="slide-12">
     <!-- Speaker note: 先人たちの視点をサラッと紹介。深掘りしすぎず、次の「共通点は何か」への伏線として扱う。 -->
     <div class="slide-header">
-      <span class="slide-num">05</span>
+      <span class="slide-num">12</span>
       <span class="slide-label">先人たちの視点</span>
     </div>
 
@@ -344,10 +654,10 @@
   <!-- ========================================================
        SLIDE 05: COMMON THREAD (PIVOT)
        ======================================================== -->
-  <section class="slide slide--pivot" id="slide-6">
+  <section class="slide slide--pivot" id="slide-13">
     <!-- Speaker note: ここが資料の転換点。様々なキーワードを並べた後、「共通しているのは感情が動いていること」という一言に収束させる。間を大事に。 -->
     <div class="slide-header">
-      <span class="slide-num">06</span>
+      <span class="slide-num">13</span>
       <span class="slide-label">共通するものは何か</span>
     </div>
 
@@ -379,10 +689,10 @@
   <!-- ========================================================
        SLIDE 06: GAME CAN'T GIVE EMOTIONS
        ======================================================== -->
-  <section class="slide" id="slide-7">
+  <section class="slide" id="slide-14">
     <!-- Speaker note: ゲームはプレイヤーに「楽しくなれ」と命令できない。できるのは「状態を作ること」だけ。この設計思想の違いが、良いゲームと悪いゲームを分ける。 -->
     <div class="slide-header">
-      <span class="slide-num">07</span>
+      <span class="slide-num">14</span>
       <span class="slide-label">設計の原則</span>
     </div>
 
@@ -445,10 +755,10 @@
   <!-- ========================================================
        SLIDE 07: 4 ELEMENTS — CIRCULAR FLOW MODEL
        ======================================================== -->
-  <section class="slide slide--4el" id="slide-8a">
+  <section class="slide slide--4el" id="slide-15a">
     <!-- Speaker note: 推測→観察→成長→変化→推測の循環。どれが欠けても感情は動かない。この4つが揃ったとき、「やめられない」体験が生まれる。 -->
     <div class="slide-header">
-      <span class="slide-num">08</span>
+      <span class="slide-num">15</span>
       <span class="slide-label">感情の運動を起こす4要素【循環モデル】</span>
     </div>
 
@@ -650,13 +960,15 @@
   </section>
 
 
+
+
   <!-- ========================================================
        SLIDE 08: BATTLE GAME TIMELINE
        ======================================================== -->
-  <section class="slide" id="slide-9">
+  <section class="slide" id="slide-16">
     <!-- Speaker note: 対戦ゲームはこの4要素がすべて詰まった教科書のような例。「勝利が嬉しい」のは勝ったからだけではなく、そこに至るプロセス全体があるから。 -->
     <div class="slide-header">
-      <span class="slide-num">09</span>
+      <span class="slide-num">16</span>
       <span class="slide-label">例：対戦ゲームにおける感情の運動</span>
     </div>
 
@@ -762,12 +1074,217 @@
 
 
   <!-- ========================================================
+       SLIDE: HOOK × 4 ELEMENTS — 導入の回収（16の図を再利用、観察・成長を落とす）
+       ======================================================== -->
+  <section class="slide slide--4el slide--hook4" id="slide-17">
+    <!-- Speaker note: 導入で見せた「ハマりの仕組み」を、さっきの4要素の図にそのまま当てはめる。ガチャ・抽選＝推測、派手な演出＝変化。この2つを強烈に刺激するから「ハマる」。一方で観察・成長は暗いまま。ここが弱いと感情の運動は循環せず、飽き・離脱につながる。開発者が本当に設計しているのは、この暗い半分。 -->
+    <div class="slide-header">
+      <span class="slide-num">17</span>
+      <span class="slide-label">「ハマりの仕組み」を4要素で見ると</span>
+    </div>
+
+    <div class="circ-wrap">
+<svg class="circ-svg" viewBox="0 0 1500 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="rg-c-h" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#000d18" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#001c32" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#003650" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.32"/>
+          </radialGradient>
+          <radialGradient id="rg-y-h" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#0e0d00" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#201c00" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#3c3200" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#ffd600" stop-opacity="0.32"/>
+          </radialGradient>
+          <radialGradient id="rg-o-h" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#120400" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#260900" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#3e1200" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#ff6335" stop-opacity="0.32"/>
+          </radialGradient>
+          <radialGradient id="rg-p-h" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#0a0018" stop-opacity="0.95"/>
+            <stop offset="60%"  stop-color="#1a0030" stop-opacity="0.80"/>
+            <stop offset="85%"  stop-color="#2e004c" stop-opacity="0.50"/>
+            <stop offset="100%" stop-color="#c084fc" stop-opacity="0.32"/>
+          </radialGradient>
+          <radialGradient id="rg-ctr-h" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#03060e" stop-opacity="0.98"/>
+            <stop offset="50%"  stop-color="#0a1428" stop-opacity="0.88"/>
+            <stop offset="80%"  stop-color="#1c2c4a" stop-opacity="0.62"/>
+            <stop offset="100%" stop-color="#c8d8f8" stop-opacity="0.48"/>
+          </radialGradient>
+
+          <filter id="fc-h"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fy-h"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fo-h"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fp-h"   x="-110%" y="-110%" width="320%" height="320%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="fctr-h" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="32" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="farc-h" x="-40%" y="-300%" width="180%" height="700%"><feGaussianBlur stdDeviation="11"/></filter>
+          <filter id="ftxt-h" x="-15%" y="-40%" width="130%" height="180%">
+            <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#000918" flood-opacity="1.0"/>
+          </filter>
+          <filter id="fpanel-h" x="-6%" y="-8%" width="112%" height="116%">
+            <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000510" flood-opacity="0.82"/>
+          </filter>
+        </defs>
+
+        <!-- ─── Background atmosphere ─── -->
+        <circle cx="750" cy="360" r="320" fill="rgba(0,15,42,0.55)"/>
+        <circle cx="750" cy="130" r="180" fill="rgba(0,212,255,0.07)"/>
+        <circle cx="980" cy="360" r="180" fill="rgba(255,214,0,0.07)"/>
+        <circle cx="750" cy="590" r="180" fill="rgba(255,99,53,0.07)"/>
+        <circle cx="520" cy="360" r="180" fill="rgba(192,132,252,0.07)"/>
+
+        <!-- Orbital track ring -->
+        <circle cx="750" cy="360" r="205"
+                stroke="rgba(255,255,255,0.10)" stroke-width="1.5"
+                stroke-dasharray="4 10" fill="none"/>
+
+        <!-- Arc under-glow -->
+        <path d="M 844,178 A 205,205 0 0,1 932,266" stroke="#00d4ff" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc-h)"/>
+        <path d="M 932,454 A 205,205 0 0,1 844,542" stroke="#ffd600" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc-h)"/>
+        <path d="M 656,542 A 205,205 0 0,1 568,454" stroke="#ff6335" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc-h)"/>
+        <path d="M 568,266 A 205,205 0 0,1 656,178" stroke="#c084fc" stroke-width="16" fill="none" opacity="0.38" filter="url(#farc-h)"/>
+
+        <!-- Main arcs -->
+        <path class="circ-arc circ-arc--c hook-dim-arc" d="M 844,178 A 205,205 0 0,1 928,260"
+              stroke="#00d4ff" stroke-width="6.5" fill="none"/>
+        <path class="circ-arc circ-arc--y hook-dim-arc" d="M 932,454 A 205,205 0 0,1 848,538"
+              stroke="#ffd600" stroke-width="6.5" fill="none"/>
+        <path class="circ-arc circ-arc--o hook-dim-arc" d="M 656,542 A 205,205 0 0,1 572,460"
+              stroke="#ff6335" stroke-width="6.5" fill="none"/>
+        <path class="circ-arc circ-arc--p" d="M 568,266 A 205,205 0 0,1 652,182"
+              stroke="#c084fc" stroke-width="6.5" fill="none"/>
+
+        <!-- Arrow tips at arc endpoints -->
+        <polygon points="932,266 918,251 928,245" fill="#00d4ff"/>
+        <polygon points="844,542 859,528 865,538" fill="#ffd600"/>
+        <polygon points="568,454 582,469 572,475" fill="#ff6335"/>
+        <polygon points="656,178 641,192 635,182" fill="#c084fc"/>
+
+        <!-- ══ CENTER: 感情の運動 (dominant focal point) ══ -->
+        <circle class="circ-center-pulse" cx="750" cy="360" r="172" fill="none"
+                stroke="rgba(200,220,255,0.24)" stroke-width="1.8" stroke-dasharray="5 7"/>
+        <circle cx="750" cy="360" r="145" fill="url(#rg-ctr-h)"
+                stroke="rgba(200,218,255,0.92)" stroke-width="3.5" filter="url(#fctr-h)"/>
+        <circle cx="750" cy="360" r="120" fill="none"
+                stroke="rgba(180,200,240,0.22)" stroke-width="1.5"/>
+        <circle cx="750" cy="360" r="92" fill="none"
+                stroke="rgba(180,200,240,0.18)" stroke-width="1.2"/>
+        <text x="750" y="343" text-anchor="middle" dominant-baseline="auto"
+              fill="rgba(230,240,255,1.0)" font-size="42" font-weight="900" letter-spacing="0.08em"
+              font-family="Hiragino Sans,sans-serif" filter="url(#ftxt-h)">感情の</text>
+        <text x="750" y="392" text-anchor="middle" dominant-baseline="auto"
+              fill="rgba(230,240,255,1.0)" font-size="42" font-weight="900" letter-spacing="0.08em"
+              font-family="Hiragino Sans,sans-serif" filter="url(#ftxt-h)">運動</text>
+
+        <!-- ══════════════════════════════════════════
+             NODES + INFO PANELS
+             ══════════════════════════════════════════ -->
+
+        <!-- ── 推測 (cyan · TOP) ── -->
+        <circle cx="750" cy="130" r="105" fill="url(#rg-c-h)"
+                stroke="#00d4ff" stroke-width="4" filter="url(#fc-h)"/>
+        <circle cx="750" cy="130" r="85" fill="none"
+                stroke="rgba(0,212,255,0.32)" stroke-width="1.5"/>
+        <text x="750" y="130" text-anchor="middle" dominant-baseline="central"
+              fill="#00d4ff" font-size="58" font-weight="900" letter-spacing="0.05em"
+              font-family="Hiragino Sans,sans-serif" filter="url(#ftxt-h)">推測</text>
+        <line x1="855" y1="130" x2="871" y2="130" stroke="rgba(0,212,255,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
+        <g filter="url(#fpanel-h)">
+          <rect x="871" y="45" width="400" height="170" rx="10"
+                fill="rgba(6,14,34,0.96)" stroke="rgba(0,212,255,0.40)" stroke-width="1.4"/>
+          <rect x="871" y="45" width="6" height="170" rx="3" fill="#00d4ff" opacity="0.95"/>
+        </g>
+        <text x="893" y="90" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「次こそ当たるかも」</text>
+        <text x="893" y="128" fill="#00d4ff" font-size="20" font-weight="700"
+              font-family="Hiragino Sans,sans-serif">ガチャ · 抽選 · 大当たり</text>
+        <text x="893" y="186" fill="rgba(195,238,255,0.96)" font-size="19"
+              font-family="Hiragino Sans,sans-serif">◎ 強く刺激している</text>
+
+        <g class="hook-dim">
+<!-- ── 観察 (yellow · RIGHT) ── -->
+        <circle cx="980" cy="360" r="105" fill="url(#rg-y-h)"
+                stroke="#ffd600" stroke-width="4" filter="url(#fy-h)"/>
+        <circle cx="980" cy="360" r="85" fill="none"
+                stroke="rgba(255,214,0,0.32)" stroke-width="1.5"/>
+        <text x="980" y="360" text-anchor="middle" dominant-baseline="central"
+              fill="#ffd600" font-size="58" font-weight="900" letter-spacing="0.05em"
+              font-family="Hiragino Sans,sans-serif" filter="url(#ftxt-h)">観察</text>
+        <line x1="1085" y1="360" x2="1089" y2="360" stroke="rgba(255,214,0,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
+        <g filter="url(#fpanel-h)">
+          <rect x="1089" y="275" width="400" height="170" rx="10"
+                fill="rgba(14,12,0,0.96)" stroke="rgba(255,214,0,0.40)" stroke-width="1.4"/>
+          <rect x="1089" y="275" width="6" height="170" rx="3" fill="#ffd600" opacity="0.95"/>
+        </g>
+        <text x="1111" y="320" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「そういうことか！」</text>
+        <text x="1111" y="358" fill="#ffd600" font-size="20" font-weight="700"
+              font-family="Hiragino Sans,sans-serif">発見 · 理解 · 納得</text>
+        <text x="1111" y="416" fill="rgba(255,250,205,0.96)" font-size="19"
+              font-family="Hiragino Sans,sans-serif">△ 演出の信頼度を読む程度</text>
+
+        <!-- ── 成長 (orange · BOTTOM) ── -->
+        <circle cx="750" cy="590" r="105" fill="url(#rg-o-h)"
+                stroke="#ff6335" stroke-width="4" filter="url(#fo-h)"/>
+        <circle cx="750" cy="590" r="85" fill="none"
+                stroke="rgba(255,99,53,0.32)" stroke-width="1.5"/>
+        <text x="750" y="590" text-anchor="middle" dominant-baseline="central"
+              fill="#ff6335" font-size="58" font-weight="900" letter-spacing="0.05em"
+              font-family="Hiragino Sans,sans-serif" filter="url(#ftxt-h)">成長</text>
+        <line x1="645" y1="590" x2="629" y2="590" stroke="rgba(255,99,53,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
+        <g filter="url(#fpanel-h)">
+          <rect x="229" y="505" width="400" height="170" rx="10"
+                fill="rgba(14,4,0,0.96)" stroke="rgba(255,99,53,0.40)" stroke-width="1.4"/>
+          <rect x="623" y="505" width="6" height="170" rx="3" fill="#ff6335" opacity="0.95"/>
+        </g>
+        <text x="251" y="550" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「できるようになった！」</text>
+        <text x="251" y="588" fill="#ff6335" font-size="20" font-weight="700"
+              font-family="Hiragino Sans,sans-serif">達成 · 悔しさ · 再挑戦</text>
+        <text x="251" y="646" fill="rgba(255,225,205,0.96)" font-size="19"
+              font-family="Hiragino Sans,sans-serif">△ 上達ではなく「積み上げ」</text>
+
+        </g>
+<!-- ── 変化 (purple · LEFT) ── -->
+        <circle cx="520" cy="360" r="105" fill="url(#rg-p-h)"
+                stroke="#c084fc" stroke-width="4" filter="url(#fp-h)"/>
+        <circle cx="520" cy="360" r="85" fill="none"
+                stroke="rgba(192,132,252,0.32)" stroke-width="1.5"/>
+        <text x="520" y="360" text-anchor="middle" dominant-baseline="central"
+              fill="#c084fc" font-size="58" font-weight="900" letter-spacing="0.05em"
+              font-family="Hiragino Sans,sans-serif" filter="url(#ftxt-h)">変化</text>
+        <line x1="415" y1="360" x2="411" y2="360" stroke="rgba(192,132,252,0.55)" stroke-width="2" stroke-dasharray="3 3"/>
+        <g filter="url(#fpanel-h)">
+          <rect x="11" y="275" width="400" height="170" rx="10"
+                fill="rgba(8,0,16,0.96)" stroke="rgba(192,132,252,0.40)" stroke-width="1.4"/>
+          <rect x="405" y="275" width="6" height="170" rx="3" fill="#c084fc" opacity="0.95"/>
+        </g>
+        <text x="33" y="320" fill="#ffffff" font-size="28" font-weight="700" font-family="Hiragino Sans,sans-serif">「派手な演出！」</text>
+        <text x="33" y="358" fill="#c084fc" font-size="20" font-weight="700"
+              font-family="Hiragino Sans,sans-serif">レア排出 · リーチ · 虹</text>
+        <text x="33" y="416" fill="rgba(230,212,255,0.96)" font-size="19"
+              font-family="Hiragino Sans,sans-serif">◎ 強く刺激している</text>
+      </svg>
+    </div>
+
+    <div class="hook4-conclusion">
+      <p class="hook4-conc-main">ハマりの仕組みは、<span class="hl-cyan">推測</span>と<span class="hl-purple">変化</span>を強く刺激する。だから「ハマる」。</p>
+      <p class="hook4-conc-sub">でも<span class="hl-yellow">観察</span>と<span class="hl-orange">成長</span>が暗いままだと、感情の運動は循環しない。開発者が設計しているのは、<span class="hl-cyan">この暗い半分</span>。</p>
+    </div>
+  </section>
+
+
+
+
+  <!-- ========================================================
        SLIDE 09-A: SIGNAL→EXPECT→PAYOFF→EMOTION (consolidated)
        ======================================================== -->
-  <section class="slide" id="slide-10a">
-    <!-- Speaker note: シグナルが期待を生み、回収の質が感情の結果を決める。ユーザーは勝手に期待して勝手に失望する。 -->
+  <section class="slide" id="slide-18a">
+    <!-- Speaker note: シグナルが期待を生み、回収の質が感情の結果を決める。ユーザーは勝手に期待して勝手に失望する。ガチャの「爆死」や、虹演出からのハズレがまさにこれ。ハマりの仕組みも、期待値設計を誤ればクソゲー化する。 -->
     <div class="slide-header">
-      <span class="slide-num">10</span>
+      <span class="slide-num">18</span>
       <span class="slide-label">期待値コントロール</span>
     </div>
 
@@ -922,10 +1439,10 @@
   <!-- ========================================================
        SLIDE 12: DESIGN DOMAINS
        ======================================================== -->
-  <section class="slide" id="slide-11">
+  <section class="slide" id="slide-19">
     <!-- Speaker note: 面白さは一つの設計から来ない。複数の設計領域が4要素に流れ込み、感情の運動を生み出す。この構造を理解することで、「どこを直せば面白くなるか」が見えてくる。 -->
     <div class="slide-header">
-      <span class="slide-num">11</span>
+      <span class="slide-num">19</span>
       <span class="slide-label">設計領域として整理する</span>
     </div>
 
@@ -1058,10 +1575,10 @@
   <!-- ========================================================
        SLIDE B: NON-GAME APPLICATIONS (Copilot B sample)
        ======================================================== -->
-  <section class="slide" id="slide-12">
+  <section class="slide" id="slide-20">
     <!-- Speaker note: この構造はゲームだけでなく、プロダクト・教育・組織にも応用できる。自分ごとに引きつけてもらうための1枚。 -->
     <div class="slide-header">
-      <span class="slide-num">12</span>
+      <span class="slide-num">20</span>
       <span class="slide-label">この構造はゲームだけではない</span>
     </div>
 
@@ -1198,8 +1715,8 @@
   <!-- ========================================================
        SLIDE 12: CONCLUSION
        ======================================================== -->
-  <section class="slide slide--conclusion" id="slide-13">
-    <!-- Speaker note: 岡本吉起さんのフレームを出発点に、自分なりに体系化した結論。先人の言葉を受け取り、仕事を通して検証し、自分の言葉で語る。それがこの資料の核心。 -->
+  <section class="slide slide--conclusion" id="slide-21">
+    <!-- Speaker note: 岡本吉起さんのフレームを出発点に、自分なりに体系化した結論。導入の「ハマりの仕組み」に戻り、それは入口でしかなく、開発者が設計しているのは感情の運動だと締める。 -->
     <div class="conc-bg" aria-hidden="true">
       <span>◎</span><span>◈</span>
       <span>◆</span><span>★</span>
@@ -1213,8 +1730,8 @@
         によって起こる、<span class="hl-cyan nobr">感情の運動である。</span>
       </p>
       <p class="conc-by">
-        — 先人の知見と、作る側として積み上げてきた実践から体系化した結論。<br>
-        この構造はゲームだけでなく、プロダクト・教育・組織にも当てはまる。
+        — 「ハマりの仕組み」は、その入口にすぎない。<br>
+        開発者が本当に設計しているのは、この感情の運動。
       </p>
     </div>
   </section>
@@ -1223,8 +1740,8 @@
   <!-- ========================================================
        SLIDE 13: FINAL
        ======================================================== -->
-  <section class="slide slide--final" id="slide-14">
-    <!-- Speaker note: 締めは余韻を残す。「ゲームデザインとは感情の運動を設計すること」という一言だけが頭に残れば、この資料は成功。 -->
+  <section class="slide slide--final" id="slide-22">
+    <!-- Speaker note: 締めは余韻を残す。導入の「ゲームっていろいろある」に戻り、種類は違っても面白さの構造は同じ、で閉じる。「感情の運動を設計する」の一言だけが頭に残れば成功。 -->
     <div class="bg-radial" aria-hidden="true"></div>
 
     <div class="final-content">
@@ -1234,9 +1751,8 @@
         <span class="hl-cyan">感情の運動を設計</span><span class="nobr">すればいい。</span>
       </h2>
       <div class="final-detail">
-        その構造はゲームに限らない。<br>
-        <span class="hl-cyan">プロダクト・教育・マーケティング・組織</span>——<br>
-        「面白い」を意図的に生み出したいすべての場所で、この考え方は使える。
+        ソーシャルゲームも、家庭用ゲームも、パチンコも。<br>
+        人が<span class="hl-cyan">「面白い」</span>と感じる構造は、同じところにある。
       </div>
       <div class="final-tail"></div>
     </div>
@@ -1249,7 +1765,7 @@
 <div id="slide-counter">
   <span id="current-slide">1</span>
   <span class="counter-sep">/</span>
-  <span id="total-slides">14</span>
+  <span id="total-slides">22</span>
 </div>
 
 <!-- Navigation hint -->

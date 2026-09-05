@@ -2462,3 +2462,529 @@ img.ok-thumb {
   opacity: 0.75;
   color: var(--t2);
 }
+
+
+/* ============================================================
+   SLIDES 2–5: INTRO (導入)
+   ============================================================ */
+.slide--intro {
+  background: radial-gradient(ellipse 80% 70% at 50% 55%,
+    #0a1235 0%, var(--bg-1) 70%);
+}
+
+/* centered question / statement */
+.intro-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.intro-kicker {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--cyan);
+  letter-spacing: 0.32em;
+  font-weight: 700;
+  margin-bottom: 32px;
+  opacity: 0.95;
+}
+.intro-kicker--left { text-align: left; margin-bottom: 20px; }
+.intro-question {
+  font-size: 84px;
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: var(--t1);
+}
+.intro-divider {
+  width: 80px; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  margin: 40px 0 28px;
+}
+.intro-note {
+  font-size: 22px;
+  color: var(--t2);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* split: text left / visual right (slide 3) */
+.intro-split {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+.intro-headline {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.26;
+  letter-spacing: -0.02em;
+  color: var(--t1);
+  margin-bottom: 36px;
+}
+.intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+}
+.intro-tag {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--t2);
+  padding: 8px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+}
+.intro-tag--focus {
+  color: var(--t1);
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+  box-shadow: 0 0 12px rgba(0,212,255,0.3);
+}
+.intro-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.intro-visual svg,
+.intro-visual img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 24px rgba(0,212,255,0.18));
+}
+.intro-caption {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--t3);
+  letter-spacing: 0.16em;
+}
+
+/* today's topic (slide 4) */
+.intro-topic-lead {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--t2);
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+}
+.intro-topic-main {
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+  color: var(--t1);
+}
+.intro-topic-part {
+  display: inline-block;
+  color: var(--yellow);
+  border-bottom: 4px solid var(--yellow);
+  line-height: 1.1;
+  padding: 0 4px;
+}
+
+/* profile (slide 5) */
+.profile-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 64px;
+  padding: 0 40px;
+}
+.profile-avatar {
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 3px solid var(--cyan);
+  box-shadow: 0 0 32px rgba(0,212,255,0.25);
+}
+.profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.profile-avatar-initial {
+  font-family: var(--mono);
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--cyan);
+  opacity: 0.6;
+}
+.profile-name {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--t1);
+  margin-bottom: 8px;
+}
+.profile-role {
+  font-size: 20px;
+  color: var(--t3);
+  margin-bottom: 36px;
+}
+.profile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.profile-item {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.profile-item dt {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--cyan);
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+.profile-item dd {
+  font-size: 20px;
+  color: var(--t2);
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   SLIDES 6–9: INTRO part 2 (ソーシャルゲームのイメージ → 本編へ)
+   ============================================================ */
+.intro-headline--center {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.image-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  max-width: 900px;
+}
+.image-chip {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--t1);
+  padding: 12px 30px;
+  border: 1.5px solid var(--cyan-border);
+  border-radius: 999px;
+  background: var(--cyan-dim);
+}
+.image-chip--more {
+  color: var(--t3);
+  border-style: dashed;
+  background: transparent;
+}
+.intro-note--lg {
+  font-size: 26px;
+  line-height: 1.8;
+}
+
+/* hook comparison table (slide 8) */
+.hook-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+}
+.hook-title {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--t1);
+}
+.hook-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+.hook-table th {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 18px;
+  border-bottom: 2px solid var(--border);
+  color: var(--t3);
+}
+.hook-th-pachi  { color: var(--yellow); }
+.hook-th-social { color: var(--cyan); }
+.hook-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--t2);
+  vertical-align: middle;
+}
+.hook-table .hook-key {
+  font-weight: 700;
+  color: var(--t1);
+  width: 34%;
+}
+.hook-table tbody tr:nth-child(odd) td { background: rgba(255,255,255,0.02); }
+.hook-conclusion {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--t1);
+  text-align: center;
+  padding-top: 6px;
+}
+
+/* bridge to main (slide 9) */
+.slide--bridge {
+  background: radial-gradient(ellipse 70% 70% at 50% 50%,
+    #0a1235 0%, var(--bg-1) 70%);
+}
+.bridge-next {
+  margin-top: 56px;
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--cyan);
+  opacity: 0.85;
+}
+
+
+/* ============================================================
+   SLIDE 17: HOOK × 4 ELEMENTS（ハマりの仕組みを4要素で見ると）
+   ============================================================ */
+.hook4-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 34px;
+}
+.hook4-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.hook4-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-top-width: 4px;
+  border-radius: 12px;
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hook4-card--c { border-top-color: var(--cyan); }
+.hook4-card--y { border-top-color: var(--yellow); }
+.hook4-card--o { border-top-color: var(--orange); }
+.hook4-card--p { border-top-color: var(--purple); }
+.hook4-card--weak { opacity: 0.62; }
+.hook4-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hook4-name {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.hook4-card--c .hook4-name { color: var(--cyan); }
+.hook4-card--y .hook4-name { color: var(--yellow); }
+.hook4-card--o .hook4-name { color: var(--orange); }
+.hook4-card--p .hook4-name { color: var(--purple); }
+.hook4-badge {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--t2);
+}
+.hook4-card--strong .hook4-badge {
+  color: var(--t1);
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.06);
+}
+.hook4-quote {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--t1);
+}
+.hook4-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--t2);
+}
+.hook4-conclusion {
+  text-align: center;
+  padding: 22px 28px;
+  border-radius: 12px;
+  background: var(--cyan-dim);
+  border: 1px solid var(--cyan-border);
+}
+.hook4-conc-main {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--t1);
+  margin-bottom: 10px;
+}
+.hook4-conc-sub {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--t2);
+}
+
+
+/* ============================================================
+   VISUAL UPGRADES (intro + hook callback)
+   ============================================================ */
+
+/* slide 2 — faint scattered game icons behind the question */
+.intro-bg-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.13;
+  z-index: 0;
+}
+.intro-bg-icons svg { width: 100%; height: 100%; }
+.slide--intro .intro-body,
+.slide--intro .intro-split,
+.slide--intro .profile-body,
+.slide--intro .hook-body { position: relative; z-index: 1; }
+
+/* slide 6 — chips revealed one by one (cumulative steps) */
+[data-step-mode="cumulative"] .image-chip[data-step] {
+  opacity: 0.12;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+[data-step-mode="cumulative"] .image-chip.lc-active {
+  opacity: 1;
+  transform: none;
+}
+@media print {
+  [data-step-mode="cumulative"] .image-chip[data-step] { opacity: 1; transform: none; }
+}
+
+/* slide 7 — red 〇 stamp around 正解 */
+.maru {
+  position: relative;
+  display: inline-block;
+  color: var(--t1);
+  padding: 0 8px;
+}
+.maru-svg {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 150%; height: 150%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(255,68,68,0.5));
+}
+
+/* slide 8 — pachinko vs smartphone with shared mechanisms */
+.hookviz {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  gap: 28px;
+  align-items: center;
+}
+.hookviz-fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.hookviz-fig svg { width: 100%; max-height: 300px; }
+.hookviz-fig--pachi svg  { filter: drop-shadow(0 0 18px rgba(255,214,0,0.25)); }
+.hookviz-fig--social svg { filter: drop-shadow(0 0 18px rgba(0,212,255,0.25)); }
+.hookviz-cap {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+.hookviz-cap--pachi  { color: var(--yellow); }
+.hookviz-cap--social { color: var(--cyan); }
+.hookviz-rows {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hookviz-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0;
+}
+.hookviz-l, .hookviz-r {
+  font-size: 18px;
+  color: var(--t2);
+  position: relative;
+  padding: 0 18px;
+}
+.hookviz-l { text-align: right; }
+.hookviz-r { text-align: left; }
+/* connector lines toward the center pill */
+.hookviz-l::after, .hookviz-r::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 14px; height: 1px;
+}
+.hookviz-l::after  { right: 0; background: linear-gradient(90deg, transparent, var(--yellow)); }
+.hookviz-r::before { left: 0;  background: linear-gradient(90deg, var(--cyan), transparent); }
+.hookviz-mech {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--t1);
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: linear-gradient(90deg, rgba(255,214,0,0.10), rgba(0,212,255,0.10));
+  white-space: nowrap;
+}
+.hook-title { font-size: 30px; }
+
+/* slide 9 — faint 4-element teaser */
+.bridge-teaser {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  z-index: 0;
+}
+.bridge-teaser svg { width: 100%; height: 100%; }
+
+/* slide 17 — reused circular model with 観察・成長 dimmed */
+.slide--hook4 .hook-dim { opacity: 0.22; filter: saturate(0.4); }
+.slide--hook4 .hook-dim-arc { opacity: 0.18; animation: none; }
+.slide--hook4 .hook4-conclusion {
+  flex-shrink: 0;
+  margin: 6px 16px 0;
+  padding: 14px 24px;
+}
+.slide--hook4 .hook4-conc-main { font-size: 22px; margin-bottom: 4px; }
+.slide--hook4 .hook4-conc-sub  { font-size: 16px; line-height: 1.6; }
+.slide--hook4 { padding-bottom: 44px; }
+.slide--hook4 .circ-wrap { min-height: 0; }
+.slide--hook4 .circ-svg { height: 100%; width: auto; }
