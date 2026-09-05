@@ -55,12 +55,156 @@
 
 
   <!-- ========================================================
-       SLIDE 02: ASK — "面白い"とは？ (pause slide)
+       SLIDE 02: INTRO 1 — ゲーム、好きですか？
        ======================================================== -->
-  <section class="slide slide--ask" id="slide-2">
-    <!-- Speaker note: ここで一拍置く。「面白い」という言葉、誰もが日常で使うけれど、いざ説明しようとすると意外と難しい。問いを聴衆と共有してから本編に入る。 -->
+  <section class="slide slide--intro" id="slide-2">
+    <!-- Speaker note: 会場に問いかけて空気を作る。挙手してもらってもよい。好きな人もそうでない人も、この後の話は同じ土台で聞ける。 -->
     <div class="slide-header">
       <span class="slide-num">02</span>
+      <span class="slide-label">導入</span>
+    </div>
+
+    <div class="intro-body">
+      <p class="intro-kicker">QUESTION</p>
+      <h2 class="intro-question">ゲーム、<br>好きですか？</h2>
+      <div class="intro-divider"></div>
+      <p class="intro-note">好きな人も、そうでもない人も。</p>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 03: INTRO 2 — ゲームっていろいろある（家庭用の画像）
+       ======================================================== -->
+  <section class="slide slide--intro" id="slide-3">
+    <!-- Speaker note: 「ゲーム」と一口に言っても幅が広い。家庭用のイメージを見せつつ、アーケード・PC・スマホなど種類を挙げ、次のスライドでソーシャルゲームに絞る。 -->
+    <!-- 画像差し替え: 写真を使う場合は .intro-visual 内の <svg> を
+         <img src="images/console.jpg" alt="家庭用ゲーム機"> に置き換えてください -->
+    <div class="slide-header">
+      <span class="slide-num">03</span>
+      <span class="slide-label">導入</span>
+    </div>
+
+    <div class="intro-split">
+      <div class="intro-split-text">
+        <p class="intro-kicker intro-kicker--left">VARIETY</p>
+        <h2 class="intro-headline">ゲームって、<br><span class="hl-cyan">いろいろ</span>ありますね</h2>
+        <ul class="intro-tags" aria-label="ゲームの種類">
+          <li class="intro-tag intro-tag--focus">家庭用</li>
+          <li class="intro-tag">携帯機</li>
+          <li class="intro-tag">アーケード</li>
+          <li class="intro-tag">PC</li>
+          <li class="intro-tag">スマホ</li>
+        </ul>
+      </div>
+
+      <figure class="intro-visual">
+        <svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="家庭用ゲーム機のイラスト">
+          <!-- TV -->
+          <rect x="70" y="30" width="380" height="240" rx="16" fill="#0c1028" stroke="#00d4ff" stroke-width="3"/>
+          <rect x="90" y="50" width="340" height="200" rx="8" fill="#07091c" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+          <!-- screen content: simple platformer scene -->
+          <rect x="90" y="215" width="340" height="35" fill="rgba(0,212,255,0.12)"/>
+          <rect x="150" y="185" width="40" height="30" fill="#ffd600"/>
+          <rect x="190" y="185" width="40" height="30" fill="#ffd600" opacity="0.7"/>
+          <rect x="300" y="150" width="60" height="20" fill="#00e676" opacity="0.8"/>
+          <rect x="120" y="165" width="22" height="30" fill="#ff6335"/>
+          <rect x="126" y="153" width="12" height="12" fill="#ff6335"/>
+          <circle cx="330" cy="110" r="12" fill="#ffd600"/>
+          <circle cx="360" cy="90" r="8" fill="#ffd600" opacity="0.7"/>
+          <!-- TV stand -->
+          <rect x="230" y="270" width="60" height="18" fill="#111829" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+          <rect x="180" y="288" width="160" height="8" rx="4" fill="#111829" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+          <!-- console -->
+          <rect x="60" y="320" width="200" height="44" rx="8" fill="#111829" stroke="#00d4ff" stroke-width="2.5"/>
+          <rect x="80" y="336" width="70" height="12" rx="3" fill="rgba(0,212,255,0.25)"/>
+          <circle cx="236" cy="342" r="7" fill="#00e676"/>
+          <!-- controller -->
+          <path d="M300 330 Q300 316 316 316 H444 Q460 316 460 330 L470 370 Q472 386 456 386 Q444 386 436 372 L426 360 H334 L324 372 Q316 386 304 386 Q288 386 290 370 Z"
+                fill="#111829" stroke="#00d4ff" stroke-width="2.5"/>
+          <!-- d-pad -->
+          <rect x="332" y="332" width="10" height="30" rx="2" fill="#93a8d2"/>
+          <rect x="322" y="342" width="30" height="10" rx="2" fill="#93a8d2"/>
+          <!-- buttons -->
+          <circle cx="424" cy="340" r="6" fill="#ff6335"/>
+          <circle cx="438" cy="352" r="6" fill="#ffd600"/>
+          <circle cx="410" cy="352" r="6" fill="#00e676"/>
+          <circle cx="424" cy="364" r="6" fill="#00d4ff"/>
+          <!-- cable -->
+          <path d="M260 342 Q280 342 290 352" fill="none" stroke="rgba(0,212,255,0.5)" stroke-width="2"/>
+        </svg>
+        <figcaption class="intro-caption">家庭用ゲーム機</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 04: INTRO 3 — 今日のテーマ
+       ======================================================== -->
+  <section class="slide slide--intro slide--intro-topic" id="slide-4">
+    <!-- Speaker note: 対象を絞る。全部は語れないので、ソーシャルゲームの面白さの「一部」に限定することを最初に明言しておく。 -->
+    <div class="slide-header">
+      <span class="slide-num">04</span>
+      <span class="slide-label">今日のテーマ</span>
+    </div>
+
+    <div class="intro-body">
+      <p class="intro-kicker">TODAY'S TOPIC</p>
+      <p class="intro-topic-lead">今日は</p>
+      <h2 class="intro-topic-main"><span class="hl-cyan">ソーシャルゲーム</span>の<br>面白さの<span class="intro-topic-part">一部</span>を<br>お伝えします</h2>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 05: INTRO 4 — 自己紹介
+       ======================================================== -->
+  <section class="slide slide--intro" id="slide-5">
+    <!-- Speaker note: 自己紹介。ゲームとの関わりを中心に、この話をする立場を短く伝える。 -->
+    <!-- TODO: 以下のプレースホルダー（名前・所属・経歴・好きなゲーム）を実際の内容に差し替えてください -->
+    <div class="slide-header">
+      <span class="slide-num">05</span>
+      <span class="slide-label">自己紹介</span>
+    </div>
+
+    <div class="profile-body">
+      <div class="profile-avatar" aria-hidden="true">
+        <!-- 顔写真を使う場合: <img src="images/me.jpg" alt=""> に置き換え -->
+        <span class="profile-avatar-initial">?</span>
+      </div>
+
+      <div class="profile-main">
+        <p class="intro-kicker intro-kicker--left">ABOUT ME</p>
+        <h2 class="profile-name">お名前</h2>
+        <p class="profile-role">所属 / 役職</p>
+
+        <dl class="profile-list">
+          <div class="profile-item">
+            <dt>経歴</dt>
+            <dd>これまでの仕事や、ゲームとの関わりを1〜2行で</dd>
+          </div>
+          <div class="profile-item">
+            <dt>今やっていること</dt>
+            <dd>現在の仕事・活動を1行で</dd>
+          </div>
+          <div class="profile-item">
+            <dt>好きなゲーム</dt>
+            <dd>タイトルを2〜3本</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SLIDE 06: ASK — "面白い"とは？ (pause slide)
+       ======================================================== -->
+  <section class="slide slide--ask" id="slide-6">
+    <!-- Speaker note: ここで一拍置く。「面白い」という言葉、誰もが日常で使うけれど、いざ説明しようとすると意外と難しい。問いを聴衆と共有してから本編に入る。 -->
+    <div class="slide-header">
+      <span class="slide-num">06</span>
       <span class="slide-label">問い</span>
     </div>
 
@@ -95,10 +239,10 @@
   <!-- ========================================================
        SLIDE 03: WHY THIS QUESTION
        ======================================================== -->
-  <section class="slide" id="slide-3">
+  <section class="slide" id="slide-7">
     <!-- Speaker note: この問いを立てた個人的な背景。面白さの構造はゲームだけでなく、プロダクトやビジネスにも直結している。 -->
     <div class="slide-header">
-      <span class="slide-num">03</span>
+      <span class="slide-num">07</span>
       <span class="slide-label">なぜこの問いか</span>
     </div>
 
@@ -132,10 +276,10 @@
   <!-- ========================================================
        SLIDE 03: OKAMOTO (SPECIAL — GOLD)
        ======================================================== -->
-  <section class="slide slide--okamoto" id="slide-4">
+  <section class="slide slide--okamoto" id="slide-8">
     <!-- Speaker note: 岡本さんのフレームがこの資料の出発点。4段階の面白さは時系列で捉えることができる。 -->
     <div class="slide-header">
-      <span class="slide-num">04</span>
+      <span class="slide-num">08</span>
       <span class="slide-label">岡本吉起さんの視点</span>
     </div>
 
@@ -247,10 +391,10 @@
   <!-- ========================================================
        SLIDE 04: LEGENDS — portrait card style
        ======================================================== -->
-  <section class="slide" id="slide-5">
+  <section class="slide" id="slide-9">
     <!-- Speaker note: 先人たちの視点をサラッと紹介。深掘りしすぎず、次の「共通点は何か」への伏線として扱う。 -->
     <div class="slide-header">
-      <span class="slide-num">05</span>
+      <span class="slide-num">09</span>
       <span class="slide-label">先人たちの視点</span>
     </div>
 
@@ -344,10 +488,10 @@
   <!-- ========================================================
        SLIDE 05: COMMON THREAD (PIVOT)
        ======================================================== -->
-  <section class="slide slide--pivot" id="slide-6">
+  <section class="slide slide--pivot" id="slide-10">
     <!-- Speaker note: ここが資料の転換点。様々なキーワードを並べた後、「共通しているのは感情が動いていること」という一言に収束させる。間を大事に。 -->
     <div class="slide-header">
-      <span class="slide-num">06</span>
+      <span class="slide-num">10</span>
       <span class="slide-label">共通するものは何か</span>
     </div>
 
@@ -379,10 +523,10 @@
   <!-- ========================================================
        SLIDE 06: GAME CAN'T GIVE EMOTIONS
        ======================================================== -->
-  <section class="slide" id="slide-7">
+  <section class="slide" id="slide-11">
     <!-- Speaker note: ゲームはプレイヤーに「楽しくなれ」と命令できない。できるのは「状態を作ること」だけ。この設計思想の違いが、良いゲームと悪いゲームを分ける。 -->
     <div class="slide-header">
-      <span class="slide-num">07</span>
+      <span class="slide-num">11</span>
       <span class="slide-label">設計の原則</span>
     </div>
 
@@ -445,10 +589,10 @@
   <!-- ========================================================
        SLIDE 07: 4 ELEMENTS — CIRCULAR FLOW MODEL
        ======================================================== -->
-  <section class="slide slide--4el" id="slide-8a">
+  <section class="slide slide--4el" id="slide-12a">
     <!-- Speaker note: 推測→観察→成長→変化→推測の循環。どれが欠けても感情は動かない。この4つが揃ったとき、「やめられない」体験が生まれる。 -->
     <div class="slide-header">
-      <span class="slide-num">08</span>
+      <span class="slide-num">12</span>
       <span class="slide-label">感情の運動を起こす4要素【循環モデル】</span>
     </div>
 
@@ -653,10 +797,10 @@
   <!-- ========================================================
        SLIDE 08: BATTLE GAME TIMELINE
        ======================================================== -->
-  <section class="slide" id="slide-9">
+  <section class="slide" id="slide-13">
     <!-- Speaker note: 対戦ゲームはこの4要素がすべて詰まった教科書のような例。「勝利が嬉しい」のは勝ったからだけではなく、そこに至るプロセス全体があるから。 -->
     <div class="slide-header">
-      <span class="slide-num">09</span>
+      <span class="slide-num">13</span>
       <span class="slide-label">例：対戦ゲームにおける感情の運動</span>
     </div>
 
@@ -764,10 +908,10 @@
   <!-- ========================================================
        SLIDE 09-A: SIGNAL→EXPECT→PAYOFF→EMOTION (consolidated)
        ======================================================== -->
-  <section class="slide" id="slide-10a">
+  <section class="slide" id="slide-14a">
     <!-- Speaker note: シグナルが期待を生み、回収の質が感情の結果を決める。ユーザーは勝手に期待して勝手に失望する。 -->
     <div class="slide-header">
-      <span class="slide-num">10</span>
+      <span class="slide-num">14</span>
       <span class="slide-label">期待値コントロール</span>
     </div>
 
@@ -922,10 +1066,10 @@
   <!-- ========================================================
        SLIDE 12: DESIGN DOMAINS
        ======================================================== -->
-  <section class="slide" id="slide-11">
+  <section class="slide" id="slide-15">
     <!-- Speaker note: 面白さは一つの設計から来ない。複数の設計領域が4要素に流れ込み、感情の運動を生み出す。この構造を理解することで、「どこを直せば面白くなるか」が見えてくる。 -->
     <div class="slide-header">
-      <span class="slide-num">11</span>
+      <span class="slide-num">15</span>
       <span class="slide-label">設計領域として整理する</span>
     </div>
 
@@ -1058,10 +1202,10 @@
   <!-- ========================================================
        SLIDE B: NON-GAME APPLICATIONS (Copilot B sample)
        ======================================================== -->
-  <section class="slide" id="slide-12">
+  <section class="slide" id="slide-16">
     <!-- Speaker note: この構造はゲームだけでなく、プロダクト・教育・組織にも応用できる。自分ごとに引きつけてもらうための1枚。 -->
     <div class="slide-header">
-      <span class="slide-num">12</span>
+      <span class="slide-num">16</span>
       <span class="slide-label">この構造はゲームだけではない</span>
     </div>
 
@@ -1198,7 +1342,7 @@
   <!-- ========================================================
        SLIDE 12: CONCLUSION
        ======================================================== -->
-  <section class="slide slide--conclusion" id="slide-13">
+  <section class="slide slide--conclusion" id="slide-17">
     <!-- Speaker note: 岡本吉起さんのフレームを出発点に、自分なりに体系化した結論。先人の言葉を受け取り、仕事を通して検証し、自分の言葉で語る。それがこの資料の核心。 -->
     <div class="conc-bg" aria-hidden="true">
       <span>◎</span><span>◈</span>
@@ -1223,7 +1367,7 @@
   <!-- ========================================================
        SLIDE 13: FINAL
        ======================================================== -->
-  <section class="slide slide--final" id="slide-14">
+  <section class="slide slide--final" id="slide-18">
     <!-- Speaker note: 締めは余韻を残す。「ゲームデザインとは感情の運動を設計すること」という一言だけが頭に残れば、この資料は成功。 -->
     <div class="bg-radial" aria-hidden="true"></div>
 
@@ -1249,7 +1393,7 @@
 <div id="slide-counter">
   <span id="current-slide">1</span>
   <span class="counter-sep">/</span>
-  <span id="total-slides">14</span>
+  <span id="total-slides">18</span>
 </div>
 
 <!-- Navigation hint -->
