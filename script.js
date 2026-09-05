@@ -24,11 +24,27 @@
    * Adds .lc-active to the matching item, removes from others.
    * Updates progress dots.
    */
+  function isCumulative(idx) {
+    return slides[idx].dataset.stepMode === 'cumulative';
+  }
+
+  /** Number of sub-steps a slide has (cumulative mode adds an "empty" first step) */
+  function getStepCount(idx) {
+    const n = getStepItems(idx).length;
+    if (!n) return 0;
+    return isCumulative(idx) ? n + 1 : n;
+  }
+
   function applyStep(idx, step) {
     const items = getStepItems(idx);
     if (!items.length) return;
 
-    items.forEach((el, i) => el.classList.toggle('lc-active', i === step));
+    if (isCumulative(idx)) {
+      // step 0 = nothing shown, step k = first k items shown
+      items.forEach((el, i) => el.classList.toggle('lc-active', i < step));
+    } else {
+      items.forEach((el, i) => el.classList.toggle('lc-active', i === step));
+    }
 
     const dots = slides[idx].querySelectorAll('.legend-step-dot');
     dots.forEach((dot, i) => dot.classList.toggle('active', i === step));
@@ -52,10 +68,10 @@
     currentEl.textContent = current + 1;
 
     // Initialise sub-steps for slides that have them
-    const items = getStepItems(current);
-    if (items.length) {
+    const count = getStepCount(current);
+    if (count) {
       // Coming from left → start at step 0; from right → start at last step
-      applyStep(current, dir >= 0 ? 0 : items.length - 1);
+      applyStep(current, dir >= 0 ? 0 : count - 1);
     }
   }
 
@@ -63,10 +79,10 @@
    * Try to advance: move to next sub-step first, then next slide.
    */
   function tryNext() {
-    const items = getStepItems(current);
-    if (items.length) {
+    const count = getStepCount(current);
+    if (count) {
       const step = stepState[current] ?? 0;
-      if (step < items.length - 1) {
+      if (step < count - 1) {
         applyStep(current, step + 1);
         return;
       }
@@ -78,8 +94,7 @@
    * Try to go back: retreat sub-step first, then previous slide.
    */
   function tryPrev() {
-    const items = getStepItems(current);
-    if (items.length) {
+    if (getStepCount(current)) {
       const step = stepState[current] ?? 0;
       if (step > 0) {
         applyStep(current, step - 1);
