@@ -2761,3 +2761,92 @@ img.ok-thumb {
   color: var(--cyan);
   opacity: 0.85;
 }
+
+
+/* ============================================================
+   SLIDE 17: HOOK × 4 ELEMENTS（ハマりの仕組みを4要素で見ると）
+   ============================================================ */
+.hook4-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 34px;
+}
+.hook4-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.hook4-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-top-width: 4px;
+  border-radius: 12px;
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hook4-card--c { border-top-color: var(--cyan); }
+.hook4-card--y { border-top-color: var(--yellow); }
+.hook4-card--o { border-top-color: var(--orange); }
+.hook4-card--p { border-top-color: var(--purple); }
+.hook4-card--weak { opacity: 0.62; }
+.hook4-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hook4-name {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.hook4-card--c .hook4-name { color: var(--cyan); }
+.hook4-card--y .hook4-name { color: var(--yellow); }
+.hook4-card--o .hook4-name { color: var(--orange); }
+.hook4-card--p .hook4-name { color: var(--purple); }
+.hook4-badge {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--t2);
+}
+.hook4-card--strong .hook4-badge {
+  color: var(--t1);
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.06);
+}
+.hook4-quote {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--t1);
+}
+.hook4-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--t2);
+}
+.hook4-conclusion {
+  text-align: center;
+  padding: 22px 28px;
+  border-radius: 12px;
+  background: var(--cyan-dim);
+  border: 1px solid var(--cyan-border);
+}
+.hook4-conc-main {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--t1);
+  margin-bottom: 10px;
+}
+.hook4-conc-sub {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--t2);
+}
