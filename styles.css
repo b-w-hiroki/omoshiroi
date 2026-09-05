@@ -2659,3 +2659,105 @@ img.ok-thumb {
   color: var(--t2);
   line-height: 1.6;
 }
+
+
+/* ============================================================
+   SLIDES 6–9: INTRO part 2 (ソーシャルゲームのイメージ → 本編へ)
+   ============================================================ */
+.intro-headline--center {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.image-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  max-width: 900px;
+}
+.image-chip {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--t1);
+  padding: 12px 30px;
+  border: 1.5px solid var(--cyan-border);
+  border-radius: 999px;
+  background: var(--cyan-dim);
+}
+.image-chip--more {
+  color: var(--t3);
+  border-style: dashed;
+  background: transparent;
+}
+.intro-note--lg {
+  font-size: 26px;
+  line-height: 1.8;
+}
+
+/* hook comparison table (slide 8) */
+.hook-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+}
+.hook-title {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--t1);
+}
+.hook-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+.hook-table th {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 18px;
+  border-bottom: 2px solid var(--border);
+  color: var(--t3);
+}
+.hook-th-pachi  { color: var(--yellow); }
+.hook-th-social { color: var(--cyan); }
+.hook-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--t2);
+  vertical-align: middle;
+}
+.hook-table .hook-key {
+  font-weight: 700;
+  color: var(--t1);
+  width: 34%;
+}
+.hook-table tbody tr:nth-child(odd) td { background: rgba(255,255,255,0.02); }
+.hook-conclusion {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--t1);
+  text-align: center;
+  padding-top: 6px;
+}
+
+/* bridge to main (slide 9) */
+.slide--bridge {
+  background: radial-gradient(ellipse 70% 70% at 50% 50%,
+    #0a1235 0%, var(--bg-1) 70%);
+}
+.bridge-next {
+  margin-top: 56px;
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--cyan);
+  opacity: 0.85;
+}
