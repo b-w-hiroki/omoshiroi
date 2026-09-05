@@ -2,3 +2,4 @@
 *.pptx
 .claude/
 .pptx-frames/
+node_modules/
