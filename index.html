@@ -278,7 +278,7 @@
        SLIDE 08: INTRO 7 — パチンコとソーシャルゲームの「ハマり」
        ======================================================== -->
   <section class="slide slide--intro" id="slide-8">
-    <!-- Speaker note: ハマりの仕組みを5点で対比。射幸性・演出・小さな投資の積み上げ・無心で続く・やめどき不明。これらも確かに「面白さ」を構成する要素であることを認めたうえで、次で「でも、それだけではない」に持っていく。 -->
+    <!-- Speaker note: ハマりの仕組みを入口・中核・出口の3段で対比。入口＝始めやすさ（少額・無心）、中核＝回したくなる（抽選・演出）、出口＝やめられない（積み上げ）。これらも確かに「面白さ」を構成する要素であることを認めたうえで、次で「でも、それだけではない」に持っていく。 -->
     <div class="slide-header">
       <span class="slide-num">08</span>
       <span class="slide-label">ハマりの仕組み</span>
@@ -313,33 +313,42 @@
         </figure>
 
         <!-- shared mechanisms -->
-        <ul class="hookviz-rows" aria-label="共通するハマりの仕組み">
-          <li class="hookviz-row">
-            <span class="hookviz-l">大当たり抽選</span>
-            <span class="hookviz-mech">次こそ当たるかも</span>
-            <span class="hookviz-r">ガチャ・ドロップ</span>
-          </li>
-          <li class="hookviz-row">
-            <span class="hookviz-l">リーチ演出</span>
-            <span class="hookviz-mech">期待を煽る演出</span>
-            <span class="hookviz-r">ガチャ演出・虹エフェクト</span>
-          </li>
-          <li class="hookviz-row">
-            <span class="hookviz-l">貸玉 1,000円から</span>
-            <span class="hookviz-mech">小さな投資が積み上がる</span>
-            <span class="hookviz-r">120円の課金から</span>
-          </li>
-          <li class="hookviz-row">
-            <span class="hookviz-l">ハンドルを握るだけ</span>
-            <span class="hookviz-mech">無心でも続けられる</span>
-            <span class="hookviz-r">タップするだけ</span>
-          </li>
-          <li class="hookviz-row">
-            <span class="hookviz-l">「ここまで打ったし」</span>
-            <span class="hookviz-mech">やめどきが分からない</span>
-            <span class="hookviz-r">「ここまで育てたし」</span>
-          </li>
-        </ul>
+        <div class="hookviz-groups" aria-label="共通するハマりの仕組み">
+          <section class="hookviz-group hookviz-group--in">
+            <h3 class="hookviz-gh"><span class="hookviz-gtag">入口</span>始めやすい</h3>
+            <div class="hookviz-row">
+              <span class="hookviz-l">貸玉 1,000円から</span>
+              <span class="hookviz-mech">少額から始まる</span>
+              <span class="hookviz-r">無料・120円から</span>
+            </div>
+            <div class="hookviz-row">
+              <span class="hookviz-l">ハンドルを握るだけ</span>
+              <span class="hookviz-mech">無心でも続けられる</span>
+              <span class="hookviz-r">タップするだけ</span>
+            </div>
+          </section>
+          <section class="hookviz-group hookviz-group--core">
+            <h3 class="hookviz-gh"><span class="hookviz-gtag">中核</span>回したくなる</h3>
+            <div class="hookviz-row">
+              <span class="hookviz-l">大当たり抽選</span>
+              <span class="hookviz-mech">次こそ当たるかも</span>
+              <span class="hookviz-r">ガチャ・ドロップ</span>
+            </div>
+            <div class="hookviz-row">
+              <span class="hookviz-l">リーチ演出</span>
+              <span class="hookviz-mech">期待を煽る演出</span>
+              <span class="hookviz-r">ガチャ演出・虹エフェクト</span>
+            </div>
+          </section>
+          <section class="hookviz-group hookviz-group--out">
+            <h3 class="hookviz-gh"><span class="hookviz-gtag">出口</span>やめられない</h3>
+            <div class="hookviz-row">
+              <span class="hookviz-l">「ここまで打ったし」</span>
+              <span class="hookviz-mech">積み上げが足かせになる</span>
+              <span class="hookviz-r">「ここまで育てたし」</span>
+            </div>
+          </section>
+        </div>
 
         <!-- smartphone -->
         <figure class="hookviz-fig hookviz-fig--social">
@@ -1077,7 +1086,7 @@
        SLIDE: HOOK × 4 ELEMENTS — 導入の回収（16の図を再利用、観察・成長を落とす）
        ======================================================== -->
   <section class="slide slide--4el slide--hook4" id="slide-17">
-    <!-- Speaker note: 導入で見せた「ハマりの仕組み」を、さっきの4要素の図にそのまま当てはめる。ガチャ・抽選＝推測、派手な演出＝変化。この2つを強烈に刺激するから「ハマる」。一方で観察・成長は暗いまま。ここが弱いと感情の運動は循環せず、飽き・離脱につながる。開発者が本当に設計しているのは、この暗い半分。 -->
+    <!-- Speaker note: 導入で見せた「ハマりの仕組み」を、さっきの4要素の図にそのまま当てはめる。入口（少額・無心）と出口（積み上げ）は感情を動かす仕組みではなく続けさせる仕組みなので図に乗らない。乗るのは中核の2つ。ガチャ・抽選＝推測、派手な演出＝変化。この2つを強烈に刺激するから「ハマる」。一方で観察・成長は暗いまま。ここが弱いと感情の運動は循環せず、飽き・離脱につながる。開発者が本当に設計しているのは、この暗い半分。 -->
     <div class="slide-header">
       <span class="slide-num">17</span>
       <span class="slide-label">「ハマりの仕組み」を4要素で見ると</span>
@@ -1270,8 +1279,8 @@
     </div>
 
     <div class="hook4-conclusion">
-      <p class="hook4-conc-main">ハマりの仕組みは、<span class="hl-cyan">推測</span>と<span class="hl-purple">変化</span>を強く刺激する。だから「ハマる」。</p>
-      <p class="hook4-conc-sub">でも<span class="hl-yellow">観察</span>と<span class="hl-orange">成長</span>が暗いままだと、感情の運動は循環しない。開発者が設計しているのは、<span class="hl-cyan">この暗い半分</span>。</p>
+      <p class="hook4-conc-main">感情を動かしているのは<span class="hl-t3">「中核」</span>の2つだけ。<span class="hl-cyan">推測</span>と<span class="hl-purple">変化</span>を強く刺激するから「ハマる」。</p>
+      <p class="hook4-conc-sub">入口と出口は感情を動かさない「続けさせる仕組み」。しかも<span class="hl-yellow">観察</span>と<span class="hl-orange">成長</span>は暗いまま。開発者が設計しているのは、<span class="hl-cyan">この暗い半分</span>。</p>
     </div>
   </section>
 
