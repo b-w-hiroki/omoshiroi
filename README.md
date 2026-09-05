@@ -73,6 +73,25 @@ xdg-open index.html    # Linux
 
 ---
 
+## PPTX / Google Slides への書き出し
+
+HTML の見た目をそのまま画像化して PPTX にします（テキスト編集は不可）。
+
+```bash
+npm install                      # pptxgenjs
+node export-pptx.js              # → presentation-export.pptx
+```
+
+- 16:9、1スライド＝全面画像（2560×1440 JPEG）、1セクション＝1枚（22枚）
+- →キーで進むサブステップ（06のチップ、12の先人カード）は全部表示した状態で1枚にまとめる。`node export-pptx.js --steps` で1ステップ＝1枚に展開
+- 各スライドの `<!-- Speaker note -->` をスピーカーノートに転記
+- Google Slides で使う場合：Google ドライブにアップロード → 「Google スライドで開く」
+
+> Playwright（Chromium）が必要です。未導入なら `npx playwright install chromium`。
+> テキストを編集可能な形で出したい場合は `generate-pptx.js`（pptxgenjs で再構築する方式）を使いますが、現在は旧14枚構成のままです。
+
+---
+
 ## 編集時の注意点
 
 - **スライドの追加・削除**：`index.html` 内の `<section class="slide">` を追加/削除するだけで自動的に枚数が更新されます

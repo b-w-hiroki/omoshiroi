@@ -1,3 +1,5 @@
 .DS_Store
 *.pptx
 .claude/
+.pptx-frames/
+node_modules/
